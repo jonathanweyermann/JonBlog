@@ -1,0 +1,32 @@
+ <div class"row">
+ <% if params[:controller] == 'posts'%>
+	 <div class="list-group">
+	 		<%= link_to "Latest Posts", posts_path, class:'list-group-item active' %>
+		<% @categories.each do | category | %>
+			<%= link_to category.name, category_path(category.id), class:'list-group-item' %> 
+
+		<% end %>
+	</did>
+<% elsif params[:controller] == 'categories' %>
+	 <div class="list-group">
+	 		<%= link_to "Latest Posts", posts_path, class:'list-group-item' %>
+		<% @categories.each do | category | %>
+			<% if category.id == params[:id].to_i %>
+				<%= link_to category.name, category_path(category.id), class:'list-group-item active' %> 
+			<% else %>
+				<%= link_to category.name, category_path(category.id), class:'list-group-item' %>
+			<% end %>
+
+		<% end %>
+	</did>
+<% elsif params[:controller] == 'about' %>
+	<div class="list-group">
+	 		<%= link_to "Latest Posts", posts_path, class:'list-group-item' %>
+		<% @categories.each do | category | %>
+			<%= link_to category.name, category_path(category.id), class:'list-group-item' %> 
+
+		<% end %>
+
+
+<% end %>
+</div>

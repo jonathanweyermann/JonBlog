@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login | rBlog</title>
+    <%= stylesheet_link_tag    'admin/login', media: 'all', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="container">
+
+      <%= yield %>
+
+    </div>
+    <footer>
+      <div class="container">
+         <%= render 'partials/admin/footer' %>
+      </div>
+    </footer>
+  </body>
+</html>
