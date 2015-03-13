@@ -36,7 +36,6 @@ gem 'will_paginate', '~> 3.0'
 gem "paperclip", "~> 4.2"
 gem "wysiwyg-rails"
 gem "font-awesome-rails"
-gem 'passenger'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

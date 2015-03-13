@@ -74,9 +74,6 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
-    passenger (5.0.2)
-      rack
-      rake (>= 0.8.1)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -154,7 +151,6 @@ DEPENDENCIES
   jquery-rails
   mail_form
   paperclip (~> 4.2)
-  passenger
   rails (= 4.1.8)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)

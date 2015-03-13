@@ -3,5 +3,6 @@ class CategoriesController < ApplicationController
   	@category = Category.find(params[:id])
     @categories = Category.all
     @posts = @category.posts
+    @users = User.all
   end
 end
