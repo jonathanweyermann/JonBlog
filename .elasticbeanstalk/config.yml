@@ -1,0 +1,10 @@
+branch-defaults:
+  master:
+    environment: rails-beanstalk-env
+global:
+  application_name: jonblog
+  default_ec2_keyname: ChaosXStorm
+  default_platform: Ruby 2.1 (Puma)
+  default_region: us-west-2
+  profile: eb-cli
+  sc: git

@@ -1,0 +1,131 @@
+[ 2015-03-11 06:38:26.4632 16265/7f1478dd47c0 agents/Watchdog/Main.cpp:1255 ]: Starting PassengerAgent watchdog...
+[ 2015-03-11 06:38:26.4688 16268/7ffe112017c0 agents/HelperAgent/Main.cpp:883 ]: Starting PassengerAgent server...
+[ 2015-03-11 06:38:26.4689 16268/7ffe112017c0 agents/HelperAgent/Main.cpp:232 ]: PassengerAgent server running in multi-application mode.
+[ 2015-03-11 06:38:26.4700 16268/7ffe112017c0 agents/HelperAgent/Main.cpp:637 ]: PassengerAgent server online, PID 16268
+[ 2015-03-11 06:38:26.4752 16273/7f804cc587c0 agents/LoggingAgent/Main.cpp:431 ]: Starting PassengerAgent logger...
+[ 2015-03-11 06:38:26.4756 16273/7f804cc587c0 agents/LoggingAgent/Main.cpp:312 ]: PassengerAgent logger online, PID 16273
+2015/03/11 06:38:28 [error] 16281#0: *4 "/home/ubuntu/jonblog/db/public/index.html" is not found (2: No such file or directory), client: 127.0.0.1, server: _, request: "HEAD / HTTP/1.1", host: "0.0.0.0"
+2015/03/11 06:38:39 [error] 16281#0: *5 "/home/ubuntu/jonblog/db/public/index.html" is not found (2: No such file or directory), client: 172.219.133.186, server: _, request: "GET / HTTP/1.1", host: "ec2-52-10-30-227.us-west-2.compute.amazonaws.com"
+
+[ 2015-03-11 06:38:55.5652 16268/7ffe0aa34700 agents/HelperAgent/Main.cpp:447 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2015-03-11 06:38:55.5652 16268/7ffe112017c0 agents/HelperAgent/Main.cpp:806 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2015-03-11 06:38:55.5653 16268/7ffe0a233700 ServerKit/Server.h:453 ]: [AdminServer] Shutdown finished
+[ 2015-03-11 06:38:55.5653 16268/7ffe0aa34700 ServerKit/Server.h:453 ]: [ServerThr.1] Shutdown finished
+[ 2015-03-11 06:38:55.5656 16268/7ffe112017c0 agents/HelperAgent/Main.cpp:868 ]: PassengerAgent server shutdown finished
+
+[ 2015-03-11 06:38:55.5661 16273/7f8046450700 agents/LoggingAgent/Main.cpp:338 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2015-03-11 06:38:55.5661 16273/7f804cc587c0 agents/LoggingAgent/Main.cpp:400 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2015-03-11 06:38:55.5661 16273/7f8046450700 ServerKit/Server.h:453 ]: [LoggerAdminServer] Shutdown finished
+[ 2015-03-11 06:38:55.5662 16273/7f804cc587c0 agents/LoggingAgent/Main.cpp:425 ]: PassengerAgent logger shutdown finished
+[ 2015-03-11 06:39:00.2936 16313/7fda4b2157c0 agents/Watchdog/Main.cpp:1255 ]: Starting PassengerAgent watchdog...
+[ 2015-03-11 06:39:00.2992 16316/7fed9bca27c0 agents/HelperAgent/Main.cpp:883 ]: Starting PassengerAgent server...
+[ 2015-03-11 06:39:00.2993 16316/7fed9bca27c0 agents/HelperAgent/Main.cpp:232 ]: PassengerAgent server running in multi-application mode.
+[ 2015-03-11 06:39:00.3005 16316/7fed9bca27c0 agents/HelperAgent/Main.cpp:637 ]: PassengerAgent server online, PID 16316
+[ 2015-03-11 06:39:00.3062 16321/7f9f760517c0 agents/LoggingAgent/Main.cpp:431 ]: Starting PassengerAgent logger...
+[ 2015-03-11 06:39:00.3066 16321/7f9f760517c0 agents/LoggingAgent/Main.cpp:312 ]: PassengerAgent logger online, PID 16321
+2015/03/11 06:39:02 [error] 16329#0: *4 "/home/ubuntu/jonblog/db/public/index.html" is not found (2: No such file or directory), client: 127.0.0.1, server: _, request: "HEAD / HTTP/1.1", host: "0.0.0.0"
+2015/03/11 06:39:12 [error] 16329#0: *5 "/home/ubuntu/jonblog/db/public/index.html" is not found (2: No such file or directory), client: 172.219.133.186, server: _, request: "GET / HTTP/1.1", host: "ec2-52-10-30-227.us-west-2.compute.amazonaws.com", referrer: "http://ec2-52-10-30-227.us-west-2.compute.amazonaws.com/contact"
+2015/03/11 06:39:12 [error] 16329#0: *5 "/home/ubuntu/jonblog/db/public/index.html" is not found (2: No such file or directory), client: 172.219.133.186, server: _, request: "GET / HTTP/1.1", host: "ec2-52-10-30-227.us-west-2.compute.amazonaws.com", referrer: "http://ec2-52-10-30-227.us-west-2.compute.amazonaws.com/contact"
+2015/03/11 06:39:21 [error] 16329#0: *5 open() "/home/ubuntu/jonblog/db/public/contact" failed (2: No such file or directory), client: 172.219.133.186, server: _, request: "GET /contact HTTP/1.1", host: "ec2-52-10-30-227.us-west-2.compute.amazonaws.com"
+
+[ 2015-03-11 06:39:43.0992 16316/7fed954d5700 agents/HelperAgent/Main.cpp:447 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2015-03-11 06:39:43.0992 16316/7fed9bca27c0 agents/HelperAgent/Main.cpp:806 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2015-03-11 06:39:43.0993 16316/7fed94cd4700 ServerKit/Server.h:453 ]: [AdminServer] Shutdown finished
+[ 2015-03-11 06:39:43.0993 16316/7fed954d5700 ServerKit/Server.h:453 ]: [ServerThr.1] Shutdown finished
+[ 2015-03-11 06:39:43.0996 16316/7fed9bca27c0 agents/HelperAgent/Main.cpp:868 ]: PassengerAgent server shutdown finished
+
+[ 2015-03-11 06:39:43.1000 16321/7f9f6f849700 agents/LoggingAgent/Main.cpp:338 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2015-03-11 06:39:43.1000 16321/7f9f760517c0 agents/LoggingAgent/Main.cpp:400 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2015-03-11 06:39:43.1001 16321/7f9f6f849700 ServerKit/Server.h:453 ]: [LoggerAdminServer] Shutdown finished
+[ 2015-03-11 06:39:43.1001 16321/7f9f760517c0 agents/LoggingAgent/Main.cpp:425 ]: PassengerAgent logger shutdown finished
+[ 2015-03-11 06:39:57.2191 16364/7f1d95d6d7c0 agents/Watchdog/Main.cpp:1255 ]: Starting PassengerAgent watchdog...
+[ 2015-03-11 06:39:57.2248 16367/7feee0b317c0 agents/HelperAgent/Main.cpp:883 ]: Starting PassengerAgent server...
+[ 2015-03-11 06:39:57.2249 16367/7feee0b317c0 agents/HelperAgent/Main.cpp:232 ]: PassengerAgent server running in multi-application mode.
+[ 2015-03-11 06:39:57.2260 16367/7feee0b317c0 agents/HelperAgent/Main.cpp:637 ]: PassengerAgent server online, PID 16367
+[ 2015-03-11 06:39:57.2317 16372/7fefc5f767c0 agents/LoggingAgent/Main.cpp:431 ]: Starting PassengerAgent logger...
+[ 2015-03-11 06:39:57.2320 16372/7fefc5f767c0 agents/LoggingAgent/Main.cpp:312 ]: PassengerAgent logger online, PID 16372
+2015/03/11 06:39:59 [error] 16380#0: *4 "/home/ubuntu/jonblog/db/public/index.html" is not found (2: No such file or directory), client: 127.0.0.1, server: _, request: "HEAD / HTTP/1.1", host: "0.0.0.0"
+
+[ 2015-03-11 06:40:16.8100 16367/7feeda364700 agents/HelperAgent/Main.cpp:447 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2015-03-11 06:40:16.8100 16367/7feee0b317c0 agents/HelperAgent/Main.cpp:806 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2015-03-11 06:40:16.8101 16367/7feed9b63700 ServerKit/Server.h:453 ]: [AdminServer] Shutdown finished
+[ 2015-03-11 06:40:16.8101 16367/7feeda364700 ServerKit/Server.h:453 ]: [ServerThr.1] Shutdown finished
+[ 2015-03-11 06:40:16.8104 16367/7feee0b317c0 agents/HelperAgent/Main.cpp:868 ]: PassengerAgent server shutdown finished
+
+[ 2015-03-11 06:40:16.8109 16372/7fefbf76e700 agents/LoggingAgent/Main.cpp:338 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2015-03-11 06:40:16.8109 16372/7fefc5f767c0 agents/LoggingAgent/Main.cpp:400 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2015-03-11 06:40:16.8110 16372/7fefbf76e700 ServerKit/Server.h:453 ]: [LoggerAdminServer] Shutdown finished
+[ 2015-03-11 06:40:16.8110 16372/7fefc5f767c0 agents/LoggingAgent/Main.cpp:425 ]: PassengerAgent logger shutdown finished
+[ 2015-03-11 06:40:39.3849 16412/7f2c2fb147c0 agents/Watchdog/Main.cpp:1255 ]: Starting PassengerAgent watchdog...
+[ 2015-03-11 06:40:39.3900 16415/7f73ebb087c0 agents/HelperAgent/Main.cpp:883 ]: Starting PassengerAgent server...
+[ 2015-03-11 06:40:39.3901 16415/7f73ebb087c0 agents/HelperAgent/Main.cpp:232 ]: PassengerAgent server running in multi-application mode.
+[ 2015-03-11 06:40:39.3912 16415/7f73ebb087c0 agents/HelperAgent/Main.cpp:637 ]: PassengerAgent server online, PID 16415
+[ 2015-03-11 06:40:39.3964 16420/7fd8efff37c0 agents/LoggingAgent/Main.cpp:431 ]: Starting PassengerAgent logger...
+[ 2015-03-11 06:40:39.3968 16420/7fd8efff37c0 agents/LoggingAgent/Main.cpp:312 ]: PassengerAgent logger online, PID 16420
+2015/03/11 06:40:41 [error] 16430#0: *4 "/home/ubuntu/jonblog/db/public/index.html" is not found (2: No such file or directory), client: 127.0.0.1, server: _, request: "HEAD / HTTP/1.1", host: "0.0.0.0"
+2015/03/11 08:54:29 [error] 16430#0: *6 "/home/ubuntu/jonblog/db/public/index.html" is not found (2: No such file or directory), client: 128.61.240.66, server: _, request: "GET / HTTP/1.0"
+2015/03/11 11:15:06 [error] 16430#0: *7 "/home/ubuntu/jonblog/db/public/index.html" is not found (2: No such file or directory), client: 54.144.23.48, server: _, request: "HEAD / HTTP/1.1", host: "52.10.30.227"
+2015/03/11 11:15:06 [error] 16430#0: *8 open() "/home/ubuntu/jonblog/db/public/clientaccesspolicy.xml" failed (2: No such file or directory), client: 54.144.23.48, server: _, request: "GET /clientaccesspolicy.xml HTTP/1.1", host: "52.10.30.227"
+2015/03/11 12:04:13 [error] 16430#0: *9 open() "/home/ubuntu/jonblog/db/public/favicon.ico" failed (2: No such file or directory), client: 172.219.133.186, server: _, request: "GET /favicon.ico HTTP/1.1", host: "ec2-52-10-30-227.us-west-2.compute.amazonaws.com"
+2015/03/11 16:20:33 [error] 16430#0: *11 open() "/home/ubuntu/jonblog/db/public/user/soapCaller.bs" failed (2: No such file or directory), client: 118.98.104.21, server: _, request: "GET /user/soapCaller.bs HTTP/1.1", host: "52.10.30.227"
+2015/03/11 19:10:31 [error] 16430#0: *12 "/home/ubuntu/jonblog/db/public/index.html" is not found (2: No such file or directory), client: 61.240.144.67, server: _, request: "GET / HTTP/1.0"
+2015/03/11 21:53:03 [error] 16430#0: *13 "/home/ubuntu/jonblog/db/public/index.html" is not found (2: No such file or directory), client: 115.236.76.242, server: _, request: "HEAD / HTTP/1.0"
+2015/03/12 04:58:22 [error] 16430#0: *14 "/home/ubuntu/jonblog/db/public/index.html" is not found (2: No such file or directory), client: 172.219.133.186, server: _, request: "GET / HTTP/1.1", host: "bob.jonathanweyermann.com"
+2015/03/12 04:58:22 [error] 16430#0: *14 open() "/home/ubuntu/jonblog/db/public/favicon.ico" failed (2: No such file or directory), client: 172.219.133.186, server: _, request: "GET /favicon.ico HTTP/1.1", host: "bob.jonathanweyermann.com"
+2015/03/12 04:58:35 [error] 16430#0: *14 "/home/ubuntu/jonblog/db/public/index.html" is not found (2: No such file or directory), client: 172.219.133.186, server: _, request: "GET / HTTP/1.1", host: "bob.jonathanweyermann.com"
+2015/03/12 05:03:15 [error] 16430#0: *17 "/home/ubuntu/jonblog/db/public/index.html" is not found (2: No such file or directory), client: 172.219.133.186, server: _, request: "GET / HTTP/1.1", host: "52.11.183.207"
+2015/03/12 05:03:16 [error] 16430#0: *17 open() "/home/ubuntu/jonblog/db/public/favicon.ico" failed (2: No such file or directory), client: 172.219.133.186, server: _, request: "GET /favicon.ico HTTP/1.1", host: "52.11.183.207"
+2015/03/12 05:03:24 [error] 16430#0: *19 "/home/ubuntu/jonblog/db/public/index.html" is not found (2: No such file or directory), client: 172.219.133.186, server: _, request: "GET / HTTP/1.1", host: "ec2-52-11-183-207.us-west-2.compute.amazonaws.com"
+2015/03/12 05:03:25 [error] 16430#0: *19 open() "/home/ubuntu/jonblog/db/public/favicon.ico" failed (2: No such file or directory), client: 172.219.133.186, server: _, request: "GET /favicon.ico HTTP/1.1", host: "ec2-52-11-183-207.us-west-2.compute.amazonaws.com"
+2015/03/12 08:43:20 [error] 16430#0: *21 open() "/home/ubuntu/jonblog/db/public/manager/html" failed (2: No such file or directory), client: 23.236.64.149, server: _, request: "GET /manager/html HTTP/1.1", host: "52.11.183.207"
+2015/03/12 12:47:14 [error] 16430#0: *22 "/home/ubuntu/jonblog/db/public/index.html" is not found (2: No such file or directory), client: 172.219.133.186, server: _, request: "GET / HTTP/1.1", host: "bob.jonathanweyermann.com"
+2015/03/12 12:47:14 [error] 16430#0: *22 open() "/home/ubuntu/jonblog/db/public/favicon.ico" failed (2: No such file or directory), client: 172.219.133.186, server: _, request: "GET /favicon.ico HTTP/1.1", host: "bob.jonathanweyermann.com"
+2015/03/12 13:24:44 [error] 16430#0: *24 "/home/ubuntu/jonblog/db/public/index.html" is not found (2: No such file or directory), client: 172.219.133.186, server: _, request: "GET / HTTP/1.1", host: "bob.jonathanweyermann.com"
+
+[ 2015-03-12 13:26:07.3754 16415/7f73e533b700 agents/HelperAgent/Main.cpp:447 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+
+[ 2015-03-12 13:26:07.3754 16420/7fd8e97eb700 agents/LoggingAgent/Main.cpp:338 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2015-03-12 13:26:07.3755 16420/7fd8efff37c0 agents/LoggingAgent/Main.cpp:400 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2015-03-12 13:26:07.3755 16415/7f73ebb087c0 agents/HelperAgent/Main.cpp:806 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2015-03-12 13:26:07.3756 16415/7f73e4b3a700 ServerKit/Server.h:453 ]: [AdminServer] Shutdown finished
+[ 2015-03-12 13:26:07.3756 16420/7fd8e97eb700 ServerKit/Server.h:453 ]: [LoggerAdminServer] Shutdown finished
+[ 2015-03-12 13:26:07.3757 16415/7f73e533b700 ServerKit/Server.h:453 ]: [ServerThr.1] Shutdown finished
+[ 2015-03-12 13:26:07.3759 16420/7fd8efff37c0 agents/LoggingAgent/Main.cpp:425 ]: PassengerAgent logger shutdown finished
+[ 2015-03-12 21:35:29.7597 10063/7f7e9dd117c0 agents/Watchdog/Main.cpp:1255 ]: Starting PassengerAgent watchdog...
+[ 2015-03-12 21:35:29.7649 10066/7fd562e6b7c0 agents/HelperAgent/Main.cpp:883 ]: Starting PassengerAgent server...
+[ 2015-03-12 21:35:29.7650 10066/7fd562e6b7c0 agents/HelperAgent/Main.cpp:232 ]: PassengerAgent server running in multi-application mode.
+[ 2015-03-12 21:35:29.7662 10066/7fd562e6b7c0 agents/HelperAgent/Main.cpp:637 ]: PassengerAgent server online, PID 10066
+[ 2015-03-12 21:35:29.7716 10071/7f22db2e97c0 agents/LoggingAgent/Main.cpp:431 ]: Starting PassengerAgent logger...
+[ 2015-03-12 21:35:29.7720 10071/7f22db2e97c0 agents/LoggingAgent/Main.cpp:312 ]: PassengerAgent logger online, PID 10071
+2015/03/12 21:35:31 [error] 10079#0: *4 "/home/ubuntu/jonblog/db/public/index.html" is not found (2: No such file or directory), client: 127.0.0.1, server: _, request: "HEAD / HTTP/1.1", host: "0.0.0.0"
+
+[ 2015-03-12 21:35:32.2152 10066/7fd55c69e700 agents/HelperAgent/Main.cpp:447 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2015-03-12 21:35:32.2152 10066/7fd562e6b7c0 agents/HelperAgent/Main.cpp:806 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2015-03-12 21:35:32.2153 10066/7fd55be9d700 ServerKit/Server.h:453 ]: [AdminServer] Shutdown finished
+[ 2015-03-12 21:35:32.2153 10066/7fd55c69e700 ServerKit/Server.h:453 ]: [ServerThr.1] Shutdown finished
+
+[ 2015-03-12 21:35:32.2155 10071/7f22d4ae1700 agents/LoggingAgent/Main.cpp:338 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2015-03-12 21:35:32.2155 10071/7f22db2e97c0 agents/LoggingAgent/Main.cpp:400 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2015-03-12 21:35:32.2155 10071/7f22d4ae1700 ServerKit/Server.h:453 ]: [LoggerAdminServer] Shutdown finished
+[ 2015-03-12 21:35:32.2156 10071/7f22db2e97c0 agents/LoggingAgent/Main.cpp:425 ]: PassengerAgent logger shutdown finished
+[ 2015-03-12 21:35:32.2331 10066/7fd562e6b7c0 agents/HelperAgent/Main.cpp:868 ]: PassengerAgent server shutdown finished
+[ 2015-03-12 21:35:46.0471 10111/7ffdfeb507c0 agents/Watchdog/Main.cpp:1255 ]: Starting PassengerAgent watchdog...
+[ 2015-03-12 21:35:46.0521 10114/7f99c20567c0 agents/HelperAgent/Main.cpp:883 ]: Starting PassengerAgent server...
+[ 2015-03-12 21:35:46.0522 10114/7f99c20567c0 agents/HelperAgent/Main.cpp:232 ]: PassengerAgent server running in multi-application mode.
+[ 2015-03-12 21:35:46.0533 10114/7f99c20567c0 agents/HelperAgent/Main.cpp:637 ]: PassengerAgent server online, PID 10114
+[ 2015-03-12 21:35:46.0589 10119/7fe6f9b377c0 agents/LoggingAgent/Main.cpp:431 ]: Starting PassengerAgent logger...
+[ 2015-03-12 21:35:46.0591 10119/7fe6f9b377c0 agents/LoggingAgent/Main.cpp:312 ]: PassengerAgent logger online, PID 10119
+2015/03/12 21:35:46 [error] 10127#0: *4 "/home/ubuntu/jonblog/db/public/index.html" is not found (2: No such file or directory), client: 172.219.133.186, server: _, request: "GET / HTTP/1.1", host: "bob.jonathanweyermann.com"
+2015/03/12 21:35:48 [error] 10127#0: *5 "/home/ubuntu/jonblog/db/public/index.html" is not found (2: No such file or directory), client: 127.0.0.1, server: _, request: "HEAD / HTTP/1.1", host: "0.0.0.0"
+2015/03/12 21:35:57 [error] 10127#0: *4 "/home/ubuntu/jonblog/db/public/index.html" is not found (2: No such file or directory), client: 172.219.133.186, server: _, request: "GET / HTTP/1.1", host: "bob.jonathanweyermann.com"
+
+[ 2015-03-12 21:36:01.1732 10114/7f99bb889700 agents/HelperAgent/Main.cpp:447 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2015-03-12 21:36:01.1732 10114/7f99c20567c0 agents/HelperAgent/Main.cpp:806 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2015-03-12 21:36:01.1733 10114/7f99bb088700 ServerKit/Server.h:453 ]: [AdminServer] Shutdown finished
+[ 2015-03-12 21:36:01.1733 10114/7f99bb889700 ServerKit/Server.h:453 ]: [ServerThr.1] Shutdown finished
+[ 2015-03-12 21:36:01.1735 10114/7f99c20567c0 agents/HelperAgent/Main.cpp:868 ]: PassengerAgent server shutdown finished
+
+[ 2015-03-12 21:36:01.1740 10119/7fe6f332f700 agents/LoggingAgent/Main.cpp:338 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2015-03-12 21:36:01.1741 10119/7fe6f9b377c0 agents/LoggingAgent/Main.cpp:400 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2015-03-12 21:36:01.1741 10119/7fe6f332f700 ServerKit/Server.h:453 ]: [LoggerAdminServer] Shutdown finished
+[ 2015-03-12 21:36:01.1741 10119/7fe6f9b377c0 agents/LoggingAgent/Main.cpp:425 ]: PassengerAgent logger shutdown finished
