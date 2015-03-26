@@ -1,3 +1,168 @@
 // Place all the styles related to the about controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+   -webkit-box-sizing: border-box; 
+   -moz-box-sizing: border-box; 
+   box-sizing: border-box;
+}
+
+
+.group:before,
+.group:after {
+   content:"";
+   display:table;
+}
+.group:after {
+   clear:both;
+}
+.group {
+   zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - 
+MOBILE-FIRST STYLING BEGINS HERE
+- - - - - - - - - - - - - - - - - - - - - - - - */
+
+body{
+	font-family:'Ariel', sans-serif;
+	background:#eee;
+	line-height:1.6em;
+} 	
+
+.about {
+   font-family: Helvetica, Arial, sans-serif;
+   font-size: 100%;
+   line-height: 1.5;
+}
+
+
+
+.about h1, .about h2 {
+   font-family: Impact;
+   line-height: 0.9;
+   text-transform: uppercase;
+}
+
+.about h1 {
+   font-size: 3.6em;
+   margin: 0;
+}
+
+.about h2 {
+   font-size: 2em;
+}
+
+.about a {
+   color: #f03;
+   text-decoration: none;  
+}
+
+.about a:hover {
+   color: #444;
+   text-decoration: underline;
+}
+
+.about a.btn {
+   display: inline-block;
+   text-transform: uppercase;
+   background: #f03;
+   color: white;
+   margin: 1em;
+   padding: 1em 2em;
+   margin: auto;
+   -webkit-border-radius: 2em;
+      -moz-border-radius: 2em;
+           border-radius: 2em;
+}
+
+.about a.btn:hover {
+   background: #444;
+   text-decoration: none;
+}
+
+.about header {
+   background: #e9e9e9;
+   padding: 3em 1em;
+   text-align: center;
+   border-top: 0.25em solid #f03;
+}
+	
+.about header p {
+   margin-bottom: 2em;
+}
+
+.about p {
+	font-size: 1.3em;
+}
+
+
+.about #aboutfields p {
+	font-size: 0.85em;
+}
+
+.about blockquote {
+   margin: 0;
+   padding: 3em;
+   background: #2376CF;
+   font-family: georgia;
+   font-size: 1.5em;
+   text-align: center;
+   color: white;
+}
+
+#about {
+   margin: 2em;
+}
+
+.about section img {
+   background: #e9e9e9;
+   margin-top: 1.5em;
+   width: 100%;
+   -webkit-border-radius: 2em;
+      -moz-border-radius: 2em;
+           border-radius: 2em;
+}
+
+.about footer#credits {
+   text-align: center;
+   background: #f03;
+   color: white;
+   padding: 2em;
+}
+
+.about p,
+pre {
+    margin: 1em 0;
+}
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - 
+MEDIA QUERIES FOR LARGER BREAKPOINTS BEGIN HERE
+- - - - - - - - - - - - - - - - - - - - - - - - */
+
+@media screen and (min-width: 720px) {
+	#about {
+		margin-right: 5%;
+		margin-left: 5%;
+	}
+	.about section {
+		width: 45.5%;
+		margin-left: 3.9%;
+		float: left;
+	}
+	.about section:first-child {
+		margin-left: 0;
+	}
+	.about section:last-child {
+		margin-right:0;
+	}
+
+	.about #aboutfields {
+		width: 45%;
+		margin-left: 3%;
+		float: left;
+	}
+}

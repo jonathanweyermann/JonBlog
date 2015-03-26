@@ -1,3 +1,4 @@
+<% @title = @post.title %>
 <div class="well post-simple">
 	<h2 class="page-header"><%= @post.title %></h2>
 	<small>Posted by <%= @user.name %> on <%= @post.created_at.to_time.strftime('%B %e at %l:%M %p') %></small>

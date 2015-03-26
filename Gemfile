@@ -36,6 +36,8 @@ gem 'will_paginate', '~> 3.0'
 gem "paperclip", "~> 4.2"
 gem "wysiwyg-rails"
 gem "font-awesome-rails"
+gem 'sitemap_generator', '~> 5.0.5'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
