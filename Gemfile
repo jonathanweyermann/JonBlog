@@ -37,7 +37,12 @@ gem "paperclip", "~> 4.2"
 gem "wysiwyg-rails"
 gem "font-awesome-rails"
 gem 'sitemap_generator', '~> 5.0.5'
+gem 'carrierwave'
 
+group :development, :test do
+  gem 'pry'
+
+end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -49,4 +54,3 @@ gem 'sitemap_generator', '~> 5.0.5'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
