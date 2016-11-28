@@ -4,19 +4,16 @@ class Admin::WysiwygController < Admin::ApplicationController
 
   def create
     respond_to do |format|
-      binding.pry
       if img = Wysiwyg.create( image: params["file_name"].tempfile )
-        binding.pry
         format.json { render json: { link: img.image.file.file.split("public").last}}
       end
     end
   end
 
   def destroy
-    binding.pry
     w = Wysiwyg.find(params[:id])
-    w.remove_avatar!
-    w.save
+    w.remove_image!
+    w.destroy
   end
 
   private

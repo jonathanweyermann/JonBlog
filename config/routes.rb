@@ -127,6 +127,6 @@ Rails.application.routes.draw do
 
   post 'wysiwygs', to: "admin/wysiwyg#create"
   get 'wysiwygs', to: "admin/wysiwyg#index"
-  get 'wysiwygs/destroy', to: "admin/wysiwyg#destroy"
+  delete 'wysiwyg/:id', to: "admin/wysiwyg#destroy"
 
 end

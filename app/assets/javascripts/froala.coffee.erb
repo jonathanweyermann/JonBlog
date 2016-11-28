@@ -1,5 +1,4 @@
 ready = ->
-  debugger
   $('.froala_edit').froalaEditor(
     height: 500
     imageUploadParam: 'file_name'
@@ -15,22 +14,16 @@ ready = ->
       'png'
     ]
   )
-  $('.froala_edit').on 'froalaEditor.image.beforeUpload', (e, editor, images) ->
-    debugger
-  $('.froala_edit').on 'froalaEditor.image.uploaded', (e, editor, response) ->
-    debugger
-  $('.froala_edit').on 'froalaEditor.image.inserted', (e, editor, $img, response) ->
-  $('.froala_edit').on 'froalaEditor.image.replaced', (e, editor, $img, response) ->
-  $('.froala_edit').on 'froalaEditor.image.error', (e, editor, error, response) ->
-    debugger
 
   $('.froala_edit').on 'froalaEditor.image.removed', (e, editor, $img, response) ->
-    url = $img.attr('src')
-    id = url.match(/\d+/)[0]
-    $.ajax ->
-      method: 'POST'
-      url: "wysiwyg/destroy/#{id}"
-      data: src: $img.attr('src')
+    long_url = $img.attr('src')
+    id = long_url.match(/\d+/)[0]
+    url = "/wysiwyg/#{id}"
+
+    $.ajax
+      method: 'DELETE'
+      url: url
+      data: src: long_url
       error: (data) ->
         console.log 'image delete problem'
       success: (data) ->
