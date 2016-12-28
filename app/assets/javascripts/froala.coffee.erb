@@ -1,0 +1,33 @@
+ready = ->
+  $('.froala_edit').froalaEditor(
+    height: 500
+    imageUploadParam: 'file_name'
+    imageUploadParams:
+      authenticity_token: $('[data-token]').data("token"),
+      return_to: window.location.href
+    imageUploadURL: '/wysiwygs'
+    imageUploadMethod: 'POST'
+    imageMaxSize: 5 * 1024 * 1024
+    imageAllowedTypes: [
+      'jpeg'
+      'jpg'
+      'png'
+    ]
+  )
+
+  $('.froala_edit').on 'froalaEditor.image.removed', (e, editor, $img, response) ->
+    long_url = $img.attr('src')
+    id = long_url.match(/\d+/)[0]
+    url = "/wysiwyg/#{id}"
+
+    $.ajax
+      method: 'DELETE'
+      url: url
+      data: src: long_url
+      error: (data) ->
+        console.log 'image delete problem'
+      success: (data) ->
+        console.log 'image was deleted'
+
+$(document).ready(ready)
+$(document).on('page:load', ready)

@@ -1,6 +1,7 @@
 class Post < ActiveRecord::Base
 	belongs_to :category
 	belongs_to :users
+	has_many :wysiwygs
 	has_many :comments
 
 	validates :title, presence: true
@@ -12,4 +13,5 @@ class Post < ActiveRecord::Base
 	def self.search(query)
 		where("title like ? OR body like?", "%#{query}%","%#{query}%")
 	end
+	enum state: [:draft, :production]
 end

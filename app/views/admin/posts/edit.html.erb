@@ -1,10 +1,3 @@
-<script>
-  $(function() {
-    $('textarea#edit').editable({
-      inlineMode: false
-    })
-  });
-</script>
 <h2>Edit Post</h2>
 
 <%= form_for [:admin, @post] do |f| %>
@@ -41,8 +34,9 @@
 	</div>
 	<div class="form-group">
 		<%= f.label :body %>
-		<%= f.text_area :body, class:'form-control',id:'edit' %>
+		<%= f.text_area :body, size: "15x40", class:'form-control froala_edit' %>
 	</div>
+	<div data-token="<%= auth_token %>"></div>
 	<br>
 
 	<%= f.submit "Submit", class:'btn btn-primary' %>

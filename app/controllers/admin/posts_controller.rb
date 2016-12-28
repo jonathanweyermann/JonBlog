@@ -22,6 +22,10 @@ class Admin::PostsController < Admin::ApplicationController
 
   def edit
     @post = Post.find(params[:id])
+    if (params[:toggle])
+      @post.production? ? @post.draft! : @post.production!
+      redirect_to admin_posts_path and return
+    end
   end
 
   def update
@@ -46,7 +50,7 @@ class Admin::PostsController < Admin::ApplicationController
       @posts = Post.search(params[:search]).all.order('created_at DESC').paginate(:per_page => 10, :page => params[:page])
     else
       @posts = Post.all.order('created_at DESC').paginate(:per_page => 10, :page => params[:page])
-    end 
+    end
   end
 
   def show
