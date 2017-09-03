@@ -8,6 +8,7 @@ set :repo_url, 'git@bitbucket.org:weyermannx/jonblog.git'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+set :branch, ask("Branch name? or enter for master", "master")
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, '~/jonblog2'
@@ -35,7 +36,7 @@ set :ssh_options, {
 # set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
 
 # Default value for linked_dirs is []
-set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads public/staticimages}
+set :linked_dirs, %w{tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads public/staticimages}
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
@@ -43,9 +44,9 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
-after :finishing, :passenger_restart do
-  execute "cd ~/jonblog2/current ; passenger stop -p 4010 ; passenger start --daemonize -p 4010 -e production"
-end
+#after :finishing, :passenger_restart do
+#  execute "cd ~/jonblog2/current ; passenger stop -p 5000 ; passenger start --daemonize -p 5000 -e production"
+#end
 
 namespace :deploy do
 
