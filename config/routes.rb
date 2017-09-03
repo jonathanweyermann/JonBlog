@@ -116,7 +116,10 @@ Rails.application.routes.draw do
   resources "contacts", only: [:new, :create]
 
   namespace :admin do
-    resources :posts, :categories, :comments, :users, :sessions
+    resources :categories, :users, :sessions
+    resources :posts do
+      resources :comments
+    end
   end
 
   resources :posts do
@@ -128,5 +131,4 @@ Rails.application.routes.draw do
   post 'wysiwygs', to: "admin/wysiwyg#create"
   get 'wysiwygs', to: "admin/wysiwyg#index"
   delete 'wysiwyg/:id', to: "admin/wysiwyg#destroy"
-
 end

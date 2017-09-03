@@ -40,10 +40,18 @@ class Admin::PostsController < Admin::ApplicationController
 
   def destroy
     @post = Post.find(params[:id])
-    @post.destroy
-    flash[:notice] = 'Post Removed'
+    binding.pry
+    if params[:comments_only]=="true"
+      @post.comments.each do |c|
+        c.destroy
+      end
+      flash[:notice] = 'comments removed'
+    else
+      @post.destroy
+      flash[:notice] = 'Post Removed'
+    end
     redirect_to admin_posts_path
-  end
+ end
 
   def index
     if params[:search]

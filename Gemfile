@@ -5,7 +5,7 @@ gem 'therubyracer'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -27,6 +27,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
+gem 'decent_exposure'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'bcrypt-ruby', :require => "bcrypt"
@@ -38,11 +39,22 @@ gem "wysiwyg-rails"
 gem "font-awesome-rails"
 gem 'sitemap_generator', '~> 5.0.5'
 gem 'carrierwave'
+gem 'seed_dump'
+gem 'dotenv-rails'
 
 group :development, :test do
   gem 'pry'
-
 end
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-passenger'
+  gem 'capistrano-rvm'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -1,0 +1,7 @@
+<tr>
+  <td><%= comment.name %></td>
+  <td><%= comment.email %></td>
+  <td><%= comment.body %></td>
+  <td><%= comment.created_at.to_time.strftime('%B %e, %Y at %l:%M %p') %></td>
+  <td><%= link_to 'Delete', admin_post_comment_path(params[:post_id], comment), class:'btn btn-danger', method: :delete, data: {confirm: 'Are you Sure'} %>
+</tr>

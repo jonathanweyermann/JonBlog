@@ -7,6 +7,7 @@
       <th>Post Created</th>
       <th>Actions</th>
       <th>Visible</th>
+      <th>Comments</th>
     </tr>
     <% @posts.each do |post| %>
       <tr>
@@ -15,6 +16,11 @@
         <td><%= post.created_at.to_time.strftime('%B %e at %l:%M %p') %></td>
         <td><%= link_to "Edit", edit_admin_post_path(post), class:'btn btn-primary' %> <%= link_to "Delete", admin_post_path(post), class:'btn btn-danger', method: :delete, data: {confirm: 'Are you Sure'} %></td>
         <td><%= post.production? %> <%= link_to 'Toggle', edit_admin_post_path(post,toggle: true), class:'btn btn-success' %></td>
+        <td>
+          <%= post.comments.count %>
+          <%= link_to 'Delete all', admin_post_path(post, comments_only: true), class:'btn btn-danger', method: :delete, data: {confirm: 'Are you Sure'} %>
+          <%= link_to 'View Comments', admin_post_comments_path(post), class: 'btn btn-primary' %>
+        </td>
       </tr>
     <% end %>
   </table>
