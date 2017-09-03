@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock '3.4.0'
+lock '3.9.0'
 
 set :application, 'jonblog'
 set :repo_url, 'git@bitbucket.org:weyermannx/jonblog.git'
@@ -47,6 +47,8 @@ set :linked_dirs, %w{tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads
 #after :finishing, :passenger_restart do
 #  execute "cd ~/jonblog2/current ; passenger stop -p 5000 ; passenger start --daemonize -p 5000 -e production"
 #end
+
+set :passenger_restart_command, 'passenger-config restart-app --instance RIBWhFmR'
 
 namespace :deploy do
 
