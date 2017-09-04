@@ -2,7 +2,7 @@ default: &default
   adapter: postgresql
   pool: 5
   host: localhost
-  username: ubuntu
+  username: jonathan
   password: zaq1024z
   timeout: 5000
 
@@ -19,4 +19,5 @@ test:
 
 production:
   <<: *default
+  username: ubuntu
   database: jonblog

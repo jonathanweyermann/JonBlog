@@ -40,7 +40,6 @@ class Admin::PostsController < Admin::ApplicationController
 
   def destroy
     @post = Post.find(params[:id])
-    binding.pry
     if params[:comments_only]=="true"
       @post.comments.each do |c|
         c.destroy
