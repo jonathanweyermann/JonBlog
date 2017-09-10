@@ -48,7 +48,7 @@ set :linked_dirs, %w{tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads
 #  execute "cd ~/jonblog2/current ; passenger stop -p 5000 ; passenger start --daemonize -p 5000 -e production"
 #end
 
-set :passenger_restart_command, 'passenger-config restart-app --instance 9EgGQJ6x'
+set :passenger_restart_command, 'passenger-config restart-app --instance vh4pL6yX'
 
 namespace :deploy do
 
