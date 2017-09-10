@@ -2,7 +2,7 @@ body{
 	font-family:'Ariel', sans-serif;
 	background:#eee;
 	line-height:1.6em;
-} 	
+}
 
 .content{
 	margin: 0 80px;
@@ -135,4 +135,16 @@ footer{
 	font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
 	font-size: 100%;
 	background-color: #858072;
+}
+
+@media only screen and (max-width: 500px) {
+	h1 {
+		font-size: 1.4em;
+	}
+	h2 {
+		font-size: 1.4em;
+	}
+	.navbar-brand {
+		width: 30px;
+	}
 }
