@@ -8,7 +8,6 @@
                 <div class="post">
                     <div class="post-content">
                       <h2><%= post.title %></h2>
-                      <% binding.pry %>
                       <%= image_tag post.image.url,width:'100%' %>
                       <small>Posted by <%= user.name  %> on <%= post.created_at.to_time.strftime("%B %e, %Y at %l:%m %p") %></small>
                       <%= raw post.body.truncate(400) %>
