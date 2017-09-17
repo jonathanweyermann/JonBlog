@@ -16,3 +16,4 @@
 /public/uploads
 /db/*.sqlite3
 /vendor/bundle
+.env.*

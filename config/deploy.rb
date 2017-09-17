@@ -20,6 +20,7 @@ set :ssh_options, {
   auth_methods: ["publickey"],
   keys: ["~/.ssh/ChaosXStorm.pem"]
 }
+
 # Default value for :scm is :git
 # set :scm, :git
 
@@ -33,7 +34,7 @@ set :ssh_options, {
 # set :pty, true
 
 # Default value for :linked_files is []
-# set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
+set :linked_files, %w{env.production}
 
 # Default value for linked_dirs is []
 set :linked_dirs, %w{tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads public/staticimages}
@@ -51,7 +52,7 @@ set :linked_dirs, %w{tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads
 set :passenger_restart_command, 'passenger-config restart-app --instance vh4pL6yX'
 
 namespace :deploy do
-
+  before :finishing, 'linked_files:upload'
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
       # Here we can do anything such as:
