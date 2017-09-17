@@ -34,7 +34,7 @@ set :ssh_options, {
 # set :pty, true
 
 # Default value for :linked_files is []
-set :linked_files, %w{env.production}
+set :linked_files, %w{.env.production}
 
 # Default value for linked_dirs is []
 set :linked_dirs, %w{tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads public/staticimages}
