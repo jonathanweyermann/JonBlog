@@ -52,7 +52,7 @@ set :linked_dirs, %w{tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads
 set :passenger_restart_command, 'passenger-config restart-app --instance vh4pL6yX'
 
 namespace :deploy do
-  before :finishing, 'linked_files:upload'
+#  before :finishing, 'linked_files:upload'
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
       # Here we can do anything such as:
