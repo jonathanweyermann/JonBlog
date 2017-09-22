@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20161020034205) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "categories", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -53,9 +56,11 @@ ActiveRecord::Schema.define(version: 20161020034205) do
   end
 
   create_table "wysiwygs", force: true do |t|
-    t.string  "name"
-    t.integer "post_id"
-    t.string  "image"
+    t.string   "name"
+    t.integer  "post_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image"
   end
 
 end

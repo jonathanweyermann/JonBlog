@@ -19,5 +19,20 @@ module RBlog
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    config.image_bucket = ENV['IMAGE_BUCKET']
+    config.aws_access_key = ENV['AWS_ACCESS_KEY_ID']
+    config.aws_secret_key = ENV['AWS_SECRET_ACCESS_KEY']
+    config.aws_region = ENV['AWS_REGION']
+
+    config.paperclip_defaults = {
+     storage: :s3,
+     s3_host_name: 's3-us-west-2.amazonaws.com',
+     s3_credentials: {
+       bucket: config.image_bucket,
+       access_key_id: config.aws_access_key,
+       secret_access_key: config.aws_secret_key,
+       s3_region: config.aws_region
+     }
+   }
   end
 end

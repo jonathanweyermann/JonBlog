@@ -13,4 +13,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-/db/production.sqlite3
+/public/uploads
+/db/*.sqlite3
+/vendor/bundle
+.env.*

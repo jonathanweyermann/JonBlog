@@ -1,0 +1,13 @@
+<h2 class="page-header">Manage Coments</h2>
+<% if comments.exists? %>
+  <table class="table table-striped">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Comment</th>
+      <th>Written At</th>
+      <th>Actions</th>
+    </tr>
+    <%= render partial: 'comment', collection: comments %>
+  </table>
+<% end %>

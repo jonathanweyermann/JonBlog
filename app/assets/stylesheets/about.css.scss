@@ -3,8 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 * {
-   -webkit-box-sizing: border-box; 
-   -moz-box-sizing: border-box; 
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
    box-sizing: border-box;
 }
 
@@ -22,7 +22,7 @@
 }
 
 
-/* - - - - - - - - - - - - - - - - - - - - - - - 
+/* - - - - - - - - - - - - - - - - - - - - - - -
 MOBILE-FIRST STYLING BEGINS HERE
 - - - - - - - - - - - - - - - - - - - - - - - - */
 
@@ -30,7 +30,7 @@ body{
 	font-family:'Ariel', sans-serif;
 	background:#eee;
 	line-height:1.6em;
-} 	
+}
 
 .about {
    font-family: Helvetica, Arial, sans-serif;
@@ -57,7 +57,7 @@ body{
 
 .about a {
    color: #f03;
-   text-decoration: none;  
+   text-decoration: none;
 }
 
 .about a:hover {
@@ -89,7 +89,7 @@ body{
    text-align: center;
    border-top: 0.25em solid #f03;
 }
-	
+
 .about header p {
    margin-bottom: 2em;
 }
@@ -139,7 +139,7 @@ pre {
 }
 
 
-/* - - - - - - - - - - - - - - - - - - - - - - - 
+/* - - - - - - - - - - - - - - - - - - - - - - -
 MEDIA QUERIES FOR LARGER BREAKPOINTS BEGIN HERE
 - - - - - - - - - - - - - - - - - - - - - - - - */
 
