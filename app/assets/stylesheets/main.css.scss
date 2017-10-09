@@ -1,7 +1,13 @@
 body{
 	font-family:'Ariel', sans-serif;
-	background:#66A5AD;
+	background:#fff;
 	line-height:1.6em;
+}
+
+.sidebar .col-xs-8 {
+	line-height: 1.2 !important;
+	padding-right: 5px;
+	padding-left: 5px;
 }
 
 .content{
@@ -11,7 +17,7 @@ body{
 .navbar{
 	overflow:auto;
 	min-height:100px;
-	background:#003B46;
+	background:#0747A6;
 	color:#fff;
 	font-size:18px;
 	border:0;
@@ -85,7 +91,7 @@ body{
 
 .post{
 	border:1px #ccc solid;
-	background:#C4DFE6;
+	background:#F4F5F5;
 	margin-bottom:30px;
 }
 
@@ -133,8 +139,7 @@ footer{
 .sidebar {
 	padding: 10px;
 	font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
-	font-size: 100%;
-	background-color: #C4DFE6;
+	background-color: #F4F5F4;
 }
 
 .unmargin {
@@ -143,8 +148,9 @@ footer{
 }
 
 .side_image {
-	padding-left: 4px;
-  padding-right: 4px;
+	padding-left: 1px;
+  padding-right: 1px;
+	max-width: 100px;
 }
 
 @media only screen and (max-width: 500px) {
@@ -156,5 +162,28 @@ footer{
 	}
 	.navbar-brand {
 		width: 30px;
+	}
+}
+
+@media screen and (min-width: 500px) {
+	.post-simple {
+		font-size: 21px;
+		font-family: "medium-content-serif-font,Georgia,Cambria,Times New Roman,Times,serif";
+		font-style: normal;
+		font-weight: 400;
+		letter-spacing: 0.01rem;
+		line-height: 1.28;
+	}
+}
+
+@media screen and (min-width: 500px) {
+  .sidebar {
+		font-size: 21px;
+	}
+}
+
+@media screen and (min-width: 992px) {
+  .sidebar {
+		font-size: 12px;
 	}
 }
