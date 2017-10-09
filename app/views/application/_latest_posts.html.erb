@@ -1,0 +1,8 @@
+<div class="row list-group-item unmargin">
+  <div class="col-xs-4 side_image">
+    <%= link_to image_tag(post.image.url, width: '100%', class: 'side_image'), post_path(post) %>
+  </div>
+  <div class="col-xs-8">
+    <%= link_to post.title, post_path(post) %>
+  </div>
+</div>
