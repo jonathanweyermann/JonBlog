@@ -8,6 +8,7 @@
       <th>Actions</th>
       <th>Visible</th>
       <th>Comments</th>
+      <th>Preview</th>
     </tr>
     <% @posts.each do |post| %>
       <tr>
@@ -21,6 +22,7 @@
           <%= link_to 'Delete all', admin_post_path(post, comments_only: true), class:'btn btn-danger', method: :delete, data: {confirm: 'Are you Sure'} %>
           <%= link_to 'View Comments', admin_post_comments_path(post), class: 'btn btn-primary' %>
         </td>
+        <td><%= link_to 'Preview', admin_post_path(post), class: 'btn btn-primary' %></td>
       </tr>
     <% end %>
   </table>
