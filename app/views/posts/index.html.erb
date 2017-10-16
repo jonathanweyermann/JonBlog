@@ -1,39 +1,12 @@
 <div id="post-index">
     <% if @posts.exists? %>
-       <div class="row">
-          <div class="col-md-6">
-            <% @posts.each_with_index do |post,x| %>
-              <% if x%2==0 %>
-                <% user = @users.find(post.user_id) %>
-                <div class="post">
-                    <div class="post-content">
-                      <h2><%= post.title %></h2>
-                      <%= image_tag post.image.url,width:'100%' %>
-                      <small>Posted by <%= user.name  %> on <%= post.created_at.to_time.strftime("%B %e, %Y at %l:%m %p") %></small>
-                      <%= raw post.body.truncate(400) %>
-                      <%=link_to "Read More", post_path(post), class:'btn btn-primary' %>
-                    </div>
-                </div>
-              <% end %>
+      <% @posts.each_slice(2) do |slice| %>
+          <div class="row equal">
+            <% slice.each do | post | %>
+              <%= render partial: 'fragment', locals: { post: post, user: @users.find(post.user_id)} %>
             <% end %>
           </div>
-          <div class="col-md-6">
-            <% @posts.each_with_index do |post,x| %>
-              <% if x%2!=0 %>
-                  <% user = @users.find(post.user_id) %>
-                  <div class="post">
-                      <div class="post-content">
-                        <h2><%= post.title %></h2>
-                        <%= image_tag post.image.url,width:'100%' %>
-                          <small>Posted by <%= user.name  %> on <%= post.created_at.to_time.strftime("%B %e, %Y at %l:%m %p") %></small>
-                          <%= raw post.body.truncate(400) %>
-                          <%=link_to "Read More", post_path(post), class:'btn btn-primary' %>
-                      </div>
-                  </div>
-              <% end %>
-            <% end %>
-          </div>
-        </div>
+      <% end %>
     <% else %>
       <p>No posts yet</p>
     <% end %>

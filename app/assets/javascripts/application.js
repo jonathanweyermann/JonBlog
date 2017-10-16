@@ -41,4 +41,5 @@
 //= require plugins/url.min.js
 //= require plugins/video.min.js
 //= require froala
+//= require post_index.js
 //= require_tree .

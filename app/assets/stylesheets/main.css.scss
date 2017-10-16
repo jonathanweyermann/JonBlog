@@ -4,6 +4,23 @@ body{
 	line-height:1.6em;
 }
 
+/**
+ * CSS image crop. Forces image to 4:3 aspect ratio cropping at the middle.
+ * http://dabblet.com/gist/4711695
+ */
+.img-crop,
+.img-crop img{
+	width: 100%; /* gotta be responsive these days */
+	height: 250px;
+	object-fit: cover;
+}
+
+.equal {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+}
+
 .sidebar .col-xs-8 {
 	line-height: 1.2 !important;
 	padding-right: 5px;
