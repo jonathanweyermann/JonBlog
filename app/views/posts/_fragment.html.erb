@@ -7,7 +7,7 @@
         </div>
         <small>Posted by <%= user.name  %> on <%= post.created_at.to_time.strftime("%B %e, %Y at %l:%m %p") %></small>
         <%= raw post.body.truncate(400) %>
-        <<%=link_to "Read More", post_path(post), class:'btn btn-primary' %>
+        <%=link_to "Read More", post_path(post), class:'btn btn-primary' %>
       </div>
   </div>
 </div>
