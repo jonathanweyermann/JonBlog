@@ -7,7 +7,7 @@ default: &default
 
 development:
   <<: *default
-  username: jonathan
+  username: <%= ENV['DB_USERNAME'] || 'jonathan' %>
   database: jonblog
 
 # Warning: The database defined as "test" will be erased and
