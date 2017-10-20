@@ -1,6 +1,8 @@
 class Admin::PostsController < Admin::ApplicationController
   before_filter :verify_logged_in
   layout 'application', only: [:show]
+  expose(:posts) { all_your_posts }
+  expose(:posts_presenter) { PostDecorator.decorate_collection(posts) }
 
   def new
     @page_title = 'Add Post'
@@ -62,14 +64,19 @@ class Admin::PostsController < Admin::ApplicationController
  end
 
   def index
-    if params[:search]
-      @posts = Post.search(params[:search]).all.order('created_at DESC').paginate(:per_page => 10, :page => params[:page])
-    else
-      @posts = Post.all.order('created_at DESC').paginate(:per_page => 10, :page => params[:page])
-    end
+
   end
 
   private
+
+  def all_your_posts
+    if params[:search]
+      Post.search(params[:search]).all.pub_sorted.paginate(:per_page => 10, :page => params[:page])
+    else
+      Post.all.pub_sorted.paginate(:per_page => 10, :page => params[:page])
+    end
+  end
+
   def post_params
     params.require(:post).permit(:title, :category_id, :user_id, :tags, :image, :body, :publish_date)
   end

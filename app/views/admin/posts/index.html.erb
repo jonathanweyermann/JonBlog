@@ -9,7 +9,7 @@
     <th>Comments</th>
     <th>Preview</th>
   </tr>
-  <% @posts.each do |post| %>
+  <% posts_presenter.each do |post| %>
     <tr>
       <td><%= post.title %></td>
       <td><%= post.category.name %></td>
@@ -31,16 +31,19 @@
     <th>Show</th>
     <th>Post Last Updated</th>
   </tr>
-  <% @posts.each do |post| %>
+  <% posts_presenter.each do |post| %>
     <tr>
       <td> <%= link_to post.title.truncate(14), edit_admin_post_path(post), class: 'btn btn-primary' %></td>
-      <td> <%= link_to 'View', admin_post_path(post), class: 'btn btn-success' %>
+      <td>
+        <%= link_to 'View', admin_post_path(post), class: 'btn btn-success' %>
+        <%= link_to post.on_or_off, edit_admin_post_path(post,toggle: true), class:"btn btn-danger #{post.publish_button}" %>
+      </td>
       <td>
         <h5>Updated: <%= post.updated_at.to_time.strftime('%B %e at %l:%M %p') %></h5>
-        <h5>Published: <%= post.publish_date.to_time.strftime('%B %e at %l:%M %p') if post.publish_date.present? %></h5>
+        <h5 class="<%= post.posted_color %>">Published: <%= post.publish_date.to_time.strftime('%B %e at %l:%M %p') if post.publish_date.present? %></h5>
       </td>
     </tr>
   <% end %>
 </table>
 
-<%= will_paginate @posts %>
+<%= will_paginate posts %>

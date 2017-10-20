@@ -1,9 +1,9 @@
 class PostsController < ApplicationController
   def index
     if params[:search]
-      @posts = Post.production.search(params[:search]).order("created_at DESC").paginate(:per_page => 10, :page => params[:page])
+      @posts = Post.search(params[:search]).visible.pub_sorted.paginate(:per_page => 10, :page => params[:page])
     else
-      @posts = Post.production.all.order('created_at DESC').paginate(:per_page => 10, :page => params[:page])
+      @posts = Post.all.visible.pub_sorted.paginate(:per_page => 10, :page => params[:page])
   	end
   	@categories = Category.all
     @users = User.all
