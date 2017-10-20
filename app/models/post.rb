@@ -31,4 +31,9 @@ class Post < ActiveRecord::Base
 	def self.pub_sorted
 		order('publish_date DESC NULLS LAST','created_at DESC')
 	end
+
+	def visible_published_date
+		return publish_date unless publish_date.blank?
+		created_at.to_time
+	end
 end
