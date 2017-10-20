@@ -5,23 +5,26 @@
     <th>Post Category</th>
     <th>Post Created</th>
     <th>Actions</th>
-    <th>Visible</th>
+    <th>Publish</th>
+    <th>Visibility</th>
     <th>Comments</th>
-    <th>Preview</th>
   </tr>
   <% posts_presenter.each do |post| %>
     <tr>
-      <td><%= post.title %></td>
+      <td><%= link_to post.title.truncate(44), edit_admin_post_path(post), class: 'btn btn-primary' %></td>
       <td><%= post.category.name %></td>
       <td><%= post.created_at.to_time.strftime('%B %e at %l:%M %p') %></td>
-      <td><%= link_to "Edit", edit_admin_post_path(post), class:'btn btn-primary' %> <%= link_to "Delete", admin_post_path(post), class:'btn btn-danger', method: :delete, data: {confirm: 'Are you Sure'} %></td>
-      <td><%= post.production? %> <%= link_to 'Toggle', edit_admin_post_path(post,toggle: true), class:'btn btn-success' %></td>
+      <td><%= link_to 'View', admin_post_path(post), class: 'btn btn-success' %> <%= link_to "Delete", admin_post_path(post), class:'btn btn-danger', method: :delete, data: {confirm: 'Are you Sure'} %></td>
+      <td><%= link_to post.on_or_off, edit_admin_post_path(post, toggle: true), class:"btn btn-danger #{post.publish_button}" %></td>
+      <td>
+        <h5>Updated: <%= post.updated_at.to_time.strftime('%B %e at %l:%M %p') %></h5>
+        <h5 class="<%= post.posted_color %>">Published: <%= post.publish_date.to_time.strftime('%B %e at %l:%M %p') if post.publish_date.present? %></h5>
+      </td>
       <td>
         <%= post.comments.count %>
         <%= link_to 'Delete all', admin_post_path(post, comments_only: true), class:'btn btn-danger', method: :delete, data: {confirm: 'Are you Sure'} %>
         <%= link_to 'View Comments', admin_post_comments_path(post), class: 'btn btn-primary' %>
       </td>
-      <td><%= link_to 'Preview', admin_post_path(post), class: 'btn btn-primary' %></td>
     </tr>
   <% end %>
 </table>
@@ -33,10 +36,10 @@
   </tr>
   <% posts_presenter.each do |post| %>
     <tr>
-      <td> <%= link_to post.title.truncate(14), edit_admin_post_path(post), class: 'btn btn-primary' %></td>
+      <td><%= link_to post.title.truncate(14), edit_admin_post_path(post), class: 'btn btn-primary' %></td>
       <td>
         <%= link_to 'View', admin_post_path(post), class: 'btn btn-success' %>
-        <%= link_to post.on_or_off, edit_admin_post_path(post,toggle: true), class:"btn btn-danger #{post.publish_button}" %>
+        <%= link_to post.on_or_off, edit_admin_post_path(post, toggle: true), class:"btn btn-danger #{post.publish_button}" %>
       </td>
       <td>
         <h5>Updated: <%= post.updated_at.to_time.strftime('%B %e at %l:%M %p') %></h5>

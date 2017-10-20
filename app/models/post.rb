@@ -29,6 +29,6 @@ class Post < ActiveRecord::Base
 	end
 
 	def self.pub_sorted
-		order('publish_date DESC','created_at DESC')
+		order('publish_date DESC NULLS LAST','created_at DESC')
 	end
 end
