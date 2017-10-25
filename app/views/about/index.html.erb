@@ -1,29 +1,29 @@
 <div class="about">
   <% @title = "About Jonathan Weyermann" %>
   <div id="about" role="main" class="group">
-    	<h1>Welcome to my Homepage x</h1>
-          <section>
-            <%= image_tag "Jonathan.png" %>
-            <p>On this site I discuss some of my interests, personal productivity, and some of the projects I'm working on.</p>
-            <p>I'm proficient in a variety of programming languages, such as C, C#, C++, Java, PHP as well as Ruby on Rails</p>
-          </section>
-          <section>
-            <div id="aboutfields">
-              <%= image_tag "university_of_alberta.jpg" %>
-              <p>Currently a computer science student at the University of Alberta, Canada. Graduating in May 2015</p>
-            </div>
-            <div id="aboutfields">
-              <%= image_tag "railslogo.png" %>
-              <p> I'm currently building a <a href="posts/18">Quiz Training</a> Ruby on Rails App. The Beta version should be up soon.</p>
-            </div>
-            <div id="aboutfields">
-              <%= image_tag "aspnet_logo.png" %>
-              <p>Another project I'm working on is an C# asp.net productivity app. Details coming soon</p>
-            </div>
-            <div id="aboutfields">
-              <%= image_tag "android.jpg" %>
-              <p>I'm also developing an android fitness app. Details coming soon</p>
-            </div>
-          </section>
+    <h1>Welcome to my Homepage</h1>
+    <section>
+      <%= image_tag "Jonathan.jpeg" %>
+      <p>Jonathan Weyermann is a father, a husband and a web developer currently working at Alberta Motor Association as part of the digital experience team</p>
+    </section>
+    <section>
+      <div id="aboutfields">
+        <%= image_tag "agile.jpg" %>
+        <p>He works in an agile, open floor, team-based environment</p>
+      </div>
+      <div id="aboutfields">
+        <%= image_tag "railslogo.png" %>
+        <p>He writes primarily Ruby on Rails apps, but has recently been learning React and the Phoenix Framework</p>
+      </div>
+      <div id="aboutfields">
+        <%= link_to (image_tag "github.png"), "https://github.com/weyermannx" %>
+        <p>He loves git, and all of his work for AMA and some of his personal projects are available there<p>
+      </p>
+      </div>
+      <div id="aboutfields">
+        <%= image_tag "university_of_alberta.jpg" %>
+        <p>He is a University of Alberta Computer Science graduate</p>
+      </div>
+    </section>
   </div>
 </div>
