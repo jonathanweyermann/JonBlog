@@ -7,11 +7,14 @@
 			<div class="col-sm-2 col-xs-3">
 				<%= image_tag("user.jpg") %>
 			</div>
-			<div class="col-sm-10 col-xs-9">
+			<div class="col-sm-8 col-xs-7">
 				<div class="well">
 					<h4><%= comment.name %><span>/<%= comment.created_at.to_time.strftime('%B %e at %l:%M %p') %></span></h4>
 					<%= comment.body %>
 				</div>
+			</div>
+			<div class="col-xs-7">
+				<%= link_to "Reply", post_path(@post.id,comment_id: comment.id) %>
 			</div>
 		</div>
 	</div>
@@ -20,6 +23,7 @@
 	<div class="well add-comment">
 		<h2 class="page-header">Add Comment</h2>
 		<%= form_for([@post, @post.comments.build]) do |f| %>
+		  <% f.hidden_field :reply_comment_id, value: params[:comment_id] %>
 			<div class="form-group">
 				<%= f.label :name %><br>
 				<%= f.text_field :name, class:'form-control' %>
