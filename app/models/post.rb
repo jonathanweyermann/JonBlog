@@ -36,4 +36,8 @@ class Post < ActiveRecord::Base
 		return publish_date unless publish_date.blank?
 		created_at.to_time
 	end
+
+	def root_comments
+		comments.where(reply_comment: nil)
+	end
 end
