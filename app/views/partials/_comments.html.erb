@@ -6,6 +6,12 @@
 	<div class="well add-comment">
 		<h2 class="page-header"><%= comment_descriptor %></h2>
 		<a name="comment"></a>
+		<% if flash[:notice] %>
+			 <div class="alert alert-success"><%= flash[:notice] %></div>
+		<% end %>
+		<% if flash[:alert] %>
+			 <div class="alert alert-danger"><%= flash[:alert] %></div>
+		<% end %>
 
 		<%= simple_form_for [@post, @post.comments.build], html: { class: 'form-horizontal' } do |f| %>
 		  <%= f.error :base, error_method: :to_sentence %>

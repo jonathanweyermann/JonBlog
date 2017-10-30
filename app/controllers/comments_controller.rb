@@ -5,11 +5,11 @@ class CommentsController < ApplicationController
     @user = User.find(@post.user_id)
     if @comment.save
       flash[:notice] = 'Comment Added'
-      redirect_to post_path(@post)
     else
       flash[:alert] = Array(@comment.errors).to_sentence
-      render "posts/show"
+      #render "posts/show"
     end
+    redirect_to post_path(@post, anchor: 'comment')
   end
 
   private
