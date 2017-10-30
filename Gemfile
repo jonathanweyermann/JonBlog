@@ -44,6 +44,7 @@ gem 'carrierwave'
 gem 'seed_dump'
 gem 'dotenv-rails'
 gem 'aws-sdk', '~> 2.3.0'
+gem 'validates_email_format_of'
 
 group :development, :test do
   gem 'pry'

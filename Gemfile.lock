@@ -235,6 +235,8 @@ GEM
     uglifier (2.6.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    validates_email_format_of (1.6.3)
+      i18n
     will_paginate (3.0.7)
     wysiwyg-rails (2.6.5)
       font-awesome-sass (~> 4.4, >= 4.4.0)
@@ -279,6 +281,7 @@ DEPENDENCIES
   therubyracer
   turbolinks
   uglifier (>= 1.3.0)
+  validates_email_format_of
   will_paginate (~> 3.0)
   wysiwyg-rails
 
