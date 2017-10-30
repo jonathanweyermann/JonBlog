@@ -17,14 +17,14 @@ ActiveRecord::Schema.define(version: 20171026055910) do
   enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
-    t.string   "name"
+    t.string   "name",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "comments", force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
+    t.string   "name",          limit: 255
+    t.string   "email",         limit: 255
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -33,15 +33,15 @@ ActiveRecord::Schema.define(version: 20171026055910) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string   "title"
+    t.string   "title",              limit: 255
     t.integer  "category_id"
     t.integer  "user_id"
     t.text     "tags"
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
+    t.string   "image_file_name",    limit: 255
+    t.string   "image_content_type", limit: 255
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.integer  "state"
@@ -49,20 +49,20 @@ ActiveRecord::Schema.define(version: 20171026055910) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "password_hash"
-    t.string   "password_salt"
+    t.string   "name",          limit: 255
+    t.string   "email",         limit: 255
+    t.string   "password_hash", limit: 255
+    t.string   "password_salt", limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "wysiwygs", force: :cascade do |t|
-    t.string   "name"
+    t.string   "name",       limit: 255
     t.integer  "post_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "image"
+    t.string   "image",      limit: 255
   end
 
 end

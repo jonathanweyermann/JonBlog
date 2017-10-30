@@ -7,23 +7,13 @@
 		<h2 class="page-header"><%= comment_descriptor %></h2>
 		<a name="comment"></a>
 
-		<%= form_for([@post, @post.comments.build]) do |f| %>
-		  <%= f.hidden_field :reply_comment, value: params[:comment_id] %>
-			<div class="form-group">
-				<%= f.label :name %><br>
-				<%= f.text_field :name, class:'form-control' %>
-			</div>
-			<div class="form-group">
-				<%= f.label :email %><br>
-				<%= f.text_field :email, class:'form-control' %>
-			</div>
-			<div class="form-group">
-				<%= f.label :comment %><br>
-				<%= f.text_area :body, class:'form-control', rows: '8' %>
-			</div>
-			<div class="form-group">
-				<%= f.submit "Submit", class:'btn btn-primary' %>
-			</div>
+		<%= simple_form_for [@post, @post.comments.build], html: { class: 'form-horizontal' } do |f| %>
+		  <%= f.error :base, error_method: :to_sentence %>
+			<%= f.hidden_field :reply_comment, value: params[:comment_id] %>
+	    <%= f.input :name %>
+	    <%= f.input :email, error: 'Please specify a valid email' %>
+		  <%= f.input :body, label: "Comment", input_html: { rows: '8' } %>
+		  <%= f.button :submit, "Submit Comment", class: 'btn btn-primary' %>
 		<% end %>
 	</div>
 </div>

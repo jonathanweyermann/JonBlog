@@ -1,14 +1,14 @@
 class CommentsController < ApplicationController
   def create
   	@post = Post.find(params[:post_id])
-  	@comment = @post.comments.new
-
+  	@comment = @post.comments.new(comment_params)
+    @user = User.find(@post.user_id)
     if @comment.save
       flash[:notice] = 'Comment Added'
-      	redirect_to post_path(@post)
+      redirect_to post_path(@post)
     else
-      binding.pry
-      redirect_to post_path(@post), alert: @comment.errors
+      flash[:alert] = Array(@comment.errors).to_sentence
+      render "posts/show"
     end
   end
 
