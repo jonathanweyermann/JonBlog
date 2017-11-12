@@ -4,6 +4,15 @@ body{
 	line-height:1.6em;
 }
 
+pre{
+	background-color: #DDDDDD;
+	font-size: 18px;
+}
+
+.well {
+	background-color: #FBFBFB
+}
+
 /**
  * CSS image crop. Forces image to 4:3 aspect ratio cropping at the middle.
  * http://dabblet.com/gist/4711695
@@ -108,7 +117,7 @@ body{
 
 .post{
 	border:1px #ccc solid;
-	background:#F4F5F5;
+	background:#FFFFFF;
 	margin-bottom:30px;
 }
 
