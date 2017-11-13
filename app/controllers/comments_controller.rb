@@ -1,6 +1,6 @@
 class CommentsController < PostsController
   def create
-  	@post = Post.find(params[:post_id])
+  	@post = Post.friendly.find(params[:post_id])
   	#@comment = @post.comments.new(comment_params)
     @user = User.find(@post.user_id)
     binding.pry
@@ -12,7 +12,6 @@ class CommentsController < PostsController
       #render "posts/show"
       render :action => :show, :controller => :post
     end
-
   end
 
   private

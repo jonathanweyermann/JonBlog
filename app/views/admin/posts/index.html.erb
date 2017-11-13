@@ -3,7 +3,7 @@
   <tr>
     <th>Post Title</th>
     <th>Post Category</th>
-    <th>Post Created</th>
+    <th>Post Created / Length</th>
     <th>Actions</th>
     <th>Publish</th>
     <th>Visibility</th>
@@ -13,7 +13,7 @@
     <tr>
       <td><%= link_to post.title.truncate(44), edit_admin_post_path(post), class: 'btn btn-primary' %></td>
       <td><%= post.category.try(:name) %></td>
-      <td><%= post.visible_published_date.strftime('%B %e at %l:%M %p') %></td>
+      <td><%= post.visible_published_date.strftime('%B %e at %l:%M %p') %> - <%= post.body.length %> characters long</td>
       <td><%= link_to 'View', admin_post_path(post), class: 'btn btn-success' %> <%= link_to "Delete", admin_post_path(post), class:'btn btn-danger', method: :delete, data: {confirm: 'Are you Sure'} %></td>
       <td><%= link_to post.on_or_off, edit_admin_post_path(post, toggle: true), class:"btn btn-danger #{post.publish_button}" %></td>
       <td>
