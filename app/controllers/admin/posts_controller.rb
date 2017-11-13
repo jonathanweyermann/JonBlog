@@ -25,14 +25,14 @@ class Admin::PostsController < Admin::ApplicationController
 
   def show
     @categories = Category.all
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
     @user = User.find(@post.user_id)
     @comment = Comment.new
     @comments = Comment.all
   end
 
   def edit
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
     if (params[:toggle])
       @post.production? ? @post.draft! : @post.production!
       redirect_to admin_posts_path and return
@@ -40,7 +40,7 @@ class Admin::PostsController < Admin::ApplicationController
   end
 
   def update
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
     if @post.update(post_params)
       flash[:notice] = 'Post Updated'
       redirect_to admin_posts_path
@@ -50,7 +50,7 @@ class Admin::PostsController < Admin::ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
     if params[:comments_only]=="true"
       @post.comments.each do |c|
         c.destroy
