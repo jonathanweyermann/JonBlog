@@ -9,7 +9,6 @@ class CommentsController < PostsController
         redirect_to post_path(@post, anchor: 'comment')
     else
       flash[:alert] = Array(comment.errors).to_sentence
-      #render "posts/show"
       render :action => :show, :controller => :post
     end
   end

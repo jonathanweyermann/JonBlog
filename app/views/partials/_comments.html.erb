@@ -1,7 +1,8 @@
 <!-- Comments -->
 <div class="comments">
-	<h2 class="page-header"><%= @post.comments.length %> Comments</h2>
-	<%= render partial: 'partials/comment', collection: @post.root_comments %>
+	<% binding.pry %>
+	<h2 class="page-header"><%= post.comments.length %> Comments</h2>
+	<%= render partial: 'partials/comment', collection: post.root_comments %>
 
 	<div class="well add-comment">
 		<h2 class="page-header"><%= comment_descriptor %></h2>

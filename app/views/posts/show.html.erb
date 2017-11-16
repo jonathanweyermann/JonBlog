@@ -1,11 +1,12 @@
-<% @title = "#{@post.title} - Jonathan Weyermann" %>
+<% @title = "#{post.title} - Jonathan Weyermann" %>
 <div class="well post-simple">
-	<h1 class="page-header"><%= @post.title %></h1>
-	<small>Posted by <%= @user.name %> on <%= @post.visible_published_date.strftime('%B %e, %Y at %l:%M %p') %></small>
+	<% binding.pry %>
+	<h1 class="page-header"><%= post.title %></h1>
+	<small>Posted by <%= @user.name %> on <%= post.visible_published_date.strftime('%B %e, %Y at %l:%M %p') %></small>
 	<p>
-		<%= image_tag @post.image.url,width: '100%' %>
+		<%= image_tag post.image.url,width: '100%' %>
 		<p>
-		<%= raw @post.body %>
+		<%= raw post.body %>
 		</p>
 	</p>
 </div>

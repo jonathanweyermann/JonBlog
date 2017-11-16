@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  expose(:post)
-  expose :comment, parent: :post
+  expose(:post) { Post.friendly.visible.find(params[:id]) }
+  expose :comment, scope: ->{ post.comments }
 
   def index
     if params[:search]
