@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  expose(:post) { Post.friendly.visible.find(params[:id]) }
-  expose :comment, scope: ->{ post.comments }
+  expose :post, find_by: :slug
+  #expose :comment, scope: ->{ Post.find_by(slug: params[:id] ).comments }
 
   def index
     if params[:search]
@@ -13,8 +13,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    binding.pry
-    comment = post.comments.build
+    @comment = post.comments.build
 
   	@categories = Category.all
     @post = Post.friendly.visible.find(params[:id])

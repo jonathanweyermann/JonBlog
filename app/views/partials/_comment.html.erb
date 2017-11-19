@@ -10,7 +10,7 @@
 			</div>
 		</div>
 		<div class="col-xs-2">
-			<%= link_to "Reply", "#{post_path(@post.id,comment_id: comment.id)}#comment" %>
+			<%= link_to "Reply", "#{post_path(post.slug,comment_id: comment.id)}#comment" %>
 		</div>
 	</div>
 	<div class="row">
