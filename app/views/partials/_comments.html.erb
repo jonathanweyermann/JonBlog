@@ -12,12 +12,12 @@
 		<% if flash[:alert] %>
 			 <div class="alert alert-danger"><%= flash[:alert] %></div>
 		<% end %>
-		<%= simple_form_for [post, post.comments.build(session[:comment])], html: { class: 'form-horizontal' } do |f| %>
+		<%= simple_form_for [post, post.comments.build(session[:comment]) ], html: { class: 'form-horizontal', data: { toggle: 'validator' }} do |f| %>
 		  <%= f.error :base, error_method: :to_sentence %>
 			<%= f.hidden_field :reply_comment, value: params[:comment_id] %>
 	    <%= f.input :name, required: true, input_html: {maxlength: 60 } %>
-	    <%= f.input :email, error: 'Please specify a valid email', required: true, input_html: { maxlength: 100 } %>
-		  <%= f.input :body, label: "Comment", type: 'text', input_html: { rows: '8', maxlength: 3600 } %>
+	    <%= f.input :email, error: 'Please specify a valid email', required: true, type: 'email', input_html: { maxlength: 100 } %>
+		  <%= f.input :body, required: true, label: "Comment", type: 'text', input_html: { rows: '8', maxlength: 3600 } %>
 		  <%= f.button :submit, "Submit Comment", class: 'btn btn-primary' %>
 		<% end %>
 	</div>

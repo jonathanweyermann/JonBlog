@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   expose :post, find_by: :slug
-  #expose :comment, scope: ->{ Post.find_by(slug: params[:id] ).comments }
+  #expose :comment, scope: ->{ Post.find_by(slug: params[:id] ).commentss }
+#  expose :comment, scope: ->{ post.comments }, id: ->{ params[:comment_id] }
 
   def index
     if params[:search]

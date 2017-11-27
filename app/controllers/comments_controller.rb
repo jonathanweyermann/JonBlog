@@ -1,17 +1,24 @@
 class CommentsController < PostsController
+  def new
+    @post = Post.friendly.find(params[:post_id])
+    @user = User.find(@post.user_id)
+  end
+
   def create
   	@post = Post.friendly.find(params[:post_id])
-  	#@comment = @post.comments.new(comment_params)
     @user = User.find(@post.user_id)
-    current_comment = @post.comments.create(comment_params)
-    if current_comment.valid? && current_comment.save
+    comment = post.comments.create(comment_params)
+
+    if comment.valid? && comment.save
       flash[:notice] = 'Comment Added'
       session.delete(:comment)
+      redirect_to post_path(@post, anchor: 'comment')
     else
-      session[:comment] = current_comment
-      flash[:alert] = Array(current_comment.errors).to_sentence
+      session[:comment] = comment
+      flash[:alert] = Array(comment.errors).to_sentence
+      redirect_to new_post_comment_path(@post, comment_id: params["comment"]["reply_comment"], anchor: 'comment')
     end
-    redirect_to post_path(@post, anchor: 'comment')
+
   end
 
   private
