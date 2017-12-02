@@ -7,6 +7,9 @@
             <% end %>
           </div>
       <% end %>
+      <div class='digg_pagination'>
+        <h4><%= will_paginate @posts %></h4>
+      </div>
     <% else %>
       <p>No posts yet</p>
     <% end %>

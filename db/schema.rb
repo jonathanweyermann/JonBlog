@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(version: 20171112062225) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "post_id"
-    t.integer  "reply_comment"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
