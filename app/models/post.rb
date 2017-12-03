@@ -26,6 +26,10 @@ class Post < ActiveRecord::Base
 		false
 	end
 
+	def self.public(page)
+		visible.pub_sorted.paginate(:per_page => 10, :page => page)
+	end
+
 	def self.visible
 		Post.where(id: (select { |p| p.visible? }).map(&:id))
 	end
