@@ -10,7 +10,6 @@ class CommentsController < PostsController
       flash[:alert] = Array(comment.errors).to_sentence
       redirect_to new_post_comment_path(post, comment_id: params["comment"]["reply_comment"], anchor: 'comment')
     end
-
   end
 
   private

@@ -2,7 +2,7 @@ class Post < ActiveRecord::Base
 	extend FriendlyId
   friendly_id :title, use: :slugged
 	belongs_to :category
-	belongs_to :users
+	belongs_to :user
 	has_many :wysiwygs
 	has_many :comments
 

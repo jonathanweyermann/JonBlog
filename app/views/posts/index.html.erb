@@ -3,7 +3,7 @@
       <% posts.each_slice(2) do |slice| %>
           <div class="row equal">
             <% slice.each do | post | %>
-              <%= render partial: 'fragment', locals: { post: post, user: @users.find(post.user_id)} %>
+              <%= render partial: 'fragment', locals: { post: post, user: post.user} %>
             <% end %>
           </div>
       <% end %>
