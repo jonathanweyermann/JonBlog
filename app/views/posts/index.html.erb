@@ -1,14 +1,14 @@
 <div id="post-index">
-    <% if @posts.exists? %>
-      <% @posts.each_slice(2) do |slice| %>
+    <% if posts.exists? %>
+      <% posts.each_slice(2) do |slice| %>
           <div class="row equal">
             <% slice.each do | post | %>
-              <%= render partial: 'fragment', locals: { post: post, user: @users.find(post.user_id)} %>
+              <%= render partial: 'fragment', locals: { post: post, user: post.user} %>
             <% end %>
           </div>
       <% end %>
       <div class='digg_pagination'>
-        <h4><%= will_paginate @posts %></h4>
+        <h4><%= will_paginate posts %></h4>
       </div>
     <% else %>
       <p>No posts yet</p>

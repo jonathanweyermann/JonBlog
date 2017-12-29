@@ -1,19 +1,11 @@
 class PostsController < ApplicationController
-  def index
-    if params[:search]
-      @posts = Post.search(params[:search]).visible.pub_sorted.paginate(:per_page => 10, :page => params[:page])
-    else
-      @posts = Post.visible.pub_sorted.paginate(:per_page => 10, :page => params[:page])
-  	end
-  	@categories = Category.all
-    @users = User.all
-  end
+  expose :post, find_by: :slug
+  expose(:posts) { posts_filter }
+  expose(:user) { post.user }
 
-  def show
-  	@categories = Category.all
-    @post = Post.friendly.visible.find(params[:id])
-    @user = User.find(@post.user_id)
-  	@comment = Comment.new
-  	@comments = Comment.all
+  private
+
+  def posts_filter
+    params[:search] ? Post.search(params[:search]).public(params[:page]) : Post.public(params[:page])
   end
 end

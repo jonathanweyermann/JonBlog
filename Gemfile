@@ -44,6 +44,7 @@ gem 'carrierwave'
 gem 'seed_dump'
 gem 'dotenv-rails'
 gem 'aws-sdk', '~> 2.3.0'
+gem 'validates_email_format_of'
 gem 'friendly_id'
 
 group :development, :test do
@@ -51,8 +52,8 @@ group :development, :test do
 end
 
 group :development do
-  gem 'better_errors'
-  gem 'binding_of_caller'
+  #gem 'better_errors'
+  #gem 'binding_of_caller'
   gem 'capistrano'
   gem 'capistrano-rails'
   gem 'capistrano-passenger'

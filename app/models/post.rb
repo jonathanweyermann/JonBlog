@@ -2,7 +2,7 @@ class Post < ActiveRecord::Base
 	extend FriendlyId
   friendly_id :title, use: :slugged
 	belongs_to :category
-	belongs_to :users
+	belongs_to :user
 	has_many :wysiwygs
 	has_many :comments
 
@@ -26,6 +26,10 @@ class Post < ActiveRecord::Base
 		false
 	end
 
+	def self.public(page)
+		visible.pub_sorted.paginate(:per_page => 10, :page => page)
+	end
+
 	def self.visible
 		Post.where(id: (select { |p| p.visible? }).map(&:id))
 	end
@@ -37,5 +41,9 @@ class Post < ActiveRecord::Base
 	def visible_published_date
 		return publish_date unless publish_date.blank?
 		created_at.to_time
+	end
+
+	def root_comments
+		comments.where(reply_comment: nil)
 	end
 end
