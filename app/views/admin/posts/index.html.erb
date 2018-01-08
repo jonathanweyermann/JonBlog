@@ -13,7 +13,10 @@
     <tr>
       <td><%= link_to post.title.truncate(44), edit_admin_post_path(post), class: 'btn btn-primary' %></td>
       <td><%= post.category.try(:name) %></td>
-      <td><%= post.visible_published_date.strftime('%B %e at %l:%M %p') %> - <%= post.body.length %> characters long</td>
+      <td>
+        <%= post.visible_published_date.strftime('%B %e at %l:%M %p') %> - <div class="<%= post.enough_chars %>"><%= post.body.length %> characters long</div></br>
+        <div class="<%= post.image_present_color %>">Main image present: <%= post.image.present? %></div>
+      </td>
       <td><%= link_to 'View', admin_post_path(post), class: 'btn btn-success' %> <%= link_to "Delete", admin_post_path(post), class:'btn btn-danger', method: :delete, data: {confirm: 'Are you Sure'} %></td>
       <td><%= link_to post.on_or_off, edit_admin_post_path(post, toggle: true), class:"btn btn-danger #{post.publish_button}" %></td>
       <td>
@@ -36,14 +39,16 @@
   </tr>
   <% posts_presenter.each do |post| %>
     <tr>
-      <td><%= link_to post.title.truncate(14), edit_admin_post_path(post), class: 'btn btn-primary' %></td>
+      <td><%= link_to post.title.truncate(44), edit_admin_post_path(post), class: 'btn btn-primary limit_button_width' %></td>
       <td>
         <%= link_to 'View', admin_post_path(post), class: 'btn btn-success' %>
         <%= link_to post.on_or_off, edit_admin_post_path(post, toggle: true), class:"btn btn-danger #{post.publish_button}" %>
+        <div class="<%= post.enough_chars %>"><%= post.body.length %> chars</br></div>
+        <div class="<%= post.image_present_color %>">Img: <%= post.image.present? %></div>
       </td>
       <td>
-        <h5>Updated: <%= post.updated_at.to_time.strftime('%B %e at %l:%M %p') %></h5>
-        <h5 class="<%= post.posted_color %>">Published: <%= post.publish_date.to_time.strftime('%B %e at %l:%M %p') if post.publish_date.present? %></h5>
+        <h5>Upd: <%= post.updated_at.to_time.strftime('%b %e at %l:%M %p') %></h5>
+        <h5 class="<%= post.posted_color %>">Pub: <%= post.publish_date.to_time.strftime('%b %e at %l:%M %p') if post.publish_date.present? %></h5>
       </td>
     </tr>
   <% end %>
