@@ -25,6 +25,8 @@ GEM
       rack-test (~> 0.6.2)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    actionpack-page_caching (1.1.0)
+      actionpack (>= 4.0.0, < 6)
     actionview (4.2.9)
       activesupport (= 4.2.9)
       builder (~> 3.1)
@@ -241,6 +243,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  actionpack-page_caching
   autoprefixer-rails
   aws-sdk (~> 2.3.0)
   bcrypt-ruby
@@ -280,4 +283,4 @@ DEPENDENCIES
   wysiwyg-rails
 
 BUNDLED WITH
-   1.15.4
+   1.16.0

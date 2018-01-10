@@ -47,6 +47,8 @@ gem 'aws-sdk', '~> 2.3.0'
 gem 'validates_email_format_of'
 gem 'friendly_id'
 
+gem 'actionpack-page_caching'
+
 group :development, :test do
   gem 'pry'
 end
