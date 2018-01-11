@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  caches_page :show, :index
   expose :post, find_by: :slug
   expose(:posts) { posts_filter }
   expose(:user) { post.user }

@@ -2,6 +2,8 @@ class Admin::PostsController < Admin::ApplicationController
   before_filter :verify_logged_in
   layout 'application', only: [:show]
   expose(:posts) { all_your_posts }
+  expose :post, find_by: :slug
+  expose(:user) { post.user }
   expose(:posts_presenter) { PostDecorator.decorate_collection(posts) }
 
   def new
@@ -26,7 +28,6 @@ class Admin::PostsController < Admin::ApplicationController
   def show
     @categories = Category.all
     @post = Post.friendly.find(params[:id])
-    @user = User.find(@post.user_id)
     @comment = Comment.new
     @comments = Comment.all
   end
