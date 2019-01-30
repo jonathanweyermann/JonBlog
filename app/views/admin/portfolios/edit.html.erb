@@ -1,0 +1,41 @@
+<h2>Edit Portfolio</h2>
+
+<%= form_for [:admin, portfolio] do |f| %>
+	<!-- Check for errors -->
+	<% if portfolio.errors.any? %>
+		<% portfolio.errors.full_messages.each do |msg| %>
+			<!-- Show errors -->
+			<div class="alert alert-danger"><%= msg %></div>
+		<% end %>
+	<% end %>
+	<div class="form-group">
+		<%= f.label :name %>
+		<%= f.text_field :name, class:'form-control' %>
+	</div>
+	<div class="form-group">
+		<%= f.label :priority_rank %>
+		<%= f.text_field :priority, class:'form-control' %>
+	</div>
+	<div class="form-group">
+		<%= f.label :website_url %>
+		<%= f.text_field :link, class:'form-control' %>
+	</div>
+	<div class="form-group">
+		<%= f.label :image %>
+		<%= f.file_field :image %>
+	</div>
+	<% if portfolio.image.present? %>
+		<%= image_tag portfolio.image.url, width:'100%' %>
+	<% end %>
+	<br>
+	<div class="form-group">
+		<%= f.label :description %>
+		<%= f.text_area :description, size: "15x40", class:'form-control froala_edit' %>
+	</div>
+	<div data-token="<%= auth_token %>"></div>
+	<br>
+
+	<%= f.submit "Submit", class:'btn btn-primary' %>
+	<%=link_to "Cancel", admin_portfolios_path, class:'btn btn-default' %>
+
+<% end %>

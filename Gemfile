@@ -1,3 +1,4 @@
+ruby "2.2.0"
 source 'https://rubygems.org'
 
 gem 'execjs'
@@ -24,6 +25,8 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
+gem 'pdfkit'
+gem 'wkhtmltopdf-binary'
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
@@ -62,6 +65,7 @@ group :development do
   gem 'capistrano-rvm'
   gem 'capistrano-bundler'
   gem 'capistrano-linked-files'
+  gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
 end
 
 # Use ActiveModel has_secure_password

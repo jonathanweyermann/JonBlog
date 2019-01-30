@@ -1,0 +1,14 @@
+<% @title = "#{portfolio.name} - Jonathan Weyermann" %>
+<div class="well post-simple">
+	<h1 class="page-header"><%= portfolio.name %></h1>
+	<div>
+		<%= image_tag portfolio.image.url,width: '100%' %>
+		<div>
+		  <%= raw portfolio.description %>
+		</div>
+	</div>
+	<%= link_to 'Edit', edit_admin_portfolio_path(portfolio.slug), class: 'btn btn-success' %>
+	<%= link_to 'Delete', admin_portfolio_path(portfolio.slug), class:'btn btn-danger', method: :delete, data: {confirm: 'Are you Sure'} %>
+</div>
+
+<%= render 'portfolio_chunks' %>

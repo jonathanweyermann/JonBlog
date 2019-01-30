@@ -28,26 +28,41 @@ MOBILE-FIRST STYLING BEGINS HERE
 
 
 .about {
-   font-family: Helvetica, Arial, sans-serif;
+   font-family: Roboto, sans-serif;
    font-size: 100%;
    line-height: 1.5;
-}
+   background-color: #41A4F5;
+   font-size: 1.3em;
+ }
+
+ .white {
+   color: white;
+ }
 
 
 
 .about h1, .about h2 {
-   font-family: Impact;
+   font-family: Roboto;
    line-height: 0.9;
-   text-transform: uppercase;
+   margin-top: 7px;
 }
 
 .about h1 {
-   font-size: 3.6em;
-   margin: 0;
+   font-size: 3em;
 }
 
 .about h2 {
-   font-size: 2em;
+   font-size: 3em;
+}
+
+@media screen and (max-width: 768px) {
+  .about h2 {
+     font-size: 2.5em;
+  }
+  .about h1 {
+     font-size: 2.5em;
+  }
+
 }
 
 .about a {
@@ -109,7 +124,8 @@ MOBILE-FIRST STYLING BEGINS HERE
 }
 
 #about {
-   margin: 2em;
+
+   padding: 2em;
 }
 
 .about section img {

@@ -35,7 +35,7 @@ class Post < ActiveRecord::Base
 	end
 
 	def self.pub_sorted
-		order('publish_date DESC NULLS LAST','created_at DESC')
+		order('job_priority','publish_date DESC NULLS LAST','created_at DESC')
 	end
 
 	def visible_published_date

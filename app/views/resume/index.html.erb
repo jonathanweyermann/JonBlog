@@ -1,0 +1,36 @@
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
+<article class="resume-wrapper text-center position-relative container">
+  <div class="resume-wrapper-inner mx-auto text-left bg-white shadow-lg">
+    <header class="resume-header pt-md-0 web">
+	    <div class="media flex-column flex-md-row">
+		    <%= image_tag "jonathan6s.jpg", class: 'col-sm-3 img-fluid picture plr-0 mobile-resize' %>
+		    <div class="media-body p-4 d-flex flex-column flex-md-row mx-auto mx-lg-0">
+			    <div class="primary-info col-sm-6">
+				    <h1 class="name mt-0 mb1 text-white text-uppercase text-uppercase">Jonathan Weyermann</h1>
+				    <div class="title mb-3">Full Stack Developer</div>
+				    <ul class="list-unstyled">
+					    <li class="mb-2"><a href="#"><i class="far fa-envelope fa-fw mr-2" data-fa-transform="grow-3"></i>weyermannx@gmail.com</a></li>
+					    <li><a href="#"><i class="fas fa-mobile-alt fa-fw mr-2" data-fa-transform="grow-6"></i>587 983 4845</a></li>
+				    </ul>
+			    </div><!--//primary-info-->
+			    <div class="secondary-info col-sm-6 mt-2">
+				    <ul class="resume-social list-unstyled">
+		                <li class="mb-3"><a href="https://www.linkedin.com/in/jonathanweyermann/"><span class="fa-container text-center mr-2"><i class="fab fa-linkedin-in fa-2x fa-fw"></i></span>linkedin.com/in/jonathanweyermann/</a></li>
+		                <li class="mb-3"><a href="https://www.github.com/jonathanweyermann"><span class="fa-container text-center mr-2"><i class="fab fa-github-alt fa-2x fa-fw"></i></span>github.com/jonathanweyermann</a></li>
+		                <li><a href="http://www.jonathanweyermann.com"><span class="fa-container text-center mr-2"><i class="fas fa-2x fa-globe"></i></span>jonathanweyermann.com</a></li>
+				    </ul>
+			    </div><!--//secondary-info-->
+
+		    </div><!--//media-body-->
+	    </div><!--//media-->
+    </header>
+    <%= render partial: 'resume_body' %>
+
+
+  </div>
+</article>
+
+<div class="center mt1">
+  <%= link_to 'Download PDF Resume', '/resume_print.pdf', class: 'btn btn-primary btn-lg center' %>
+</div>

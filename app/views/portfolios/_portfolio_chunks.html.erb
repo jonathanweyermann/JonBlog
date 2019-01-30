@@ -1,0 +1,9 @@
+<div class="comments details">
+	<% portfolio.decorated_portfolio_chunks.each_slice(3) do |slice| %>
+		<div class="row equal">
+			<% slice.sort_by(&:created_at).each do | chunk | %>
+				<%= render partial: 'portfolio_chunk', locals: { chunk: chunk } %>
+			<% end %>
+		</div>
+	<% end %>
+</div>

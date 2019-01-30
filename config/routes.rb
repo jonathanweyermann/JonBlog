@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   get 'contact' => 'contacts#new'
   get 'contacts/create'
-  get 'about' => 'about#index'
+  get 'resume' => 'resume#index'
+  get 'resume_print' => 'resume#show'
 
 
   namespace :admin do
@@ -113,10 +114,16 @@ Rails.application.routes.draw do
   get 'posts/show'
 
   resources :posts, :categories
+  resources :portfolios do
+    resources :portfolio_chunks
+  end
   resources "contacts", only: [:new, :create]
 
   namespace :admin do
     resources :categories, :users, :sessions
+    resources :portfolios do
+      resources :portfolio_chunks
+    end
     resources :posts do
       resources :comments
     end
@@ -126,7 +133,7 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  root 'posts#index'
+  root 'dashboard#index'
 
   post 'wysiwygs', to: "admin/wysiwyg#create"
   get 'wysiwygs', to: "admin/wysiwyg#index"

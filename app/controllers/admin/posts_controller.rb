@@ -1,7 +1,7 @@
 class Admin::PostsController < Admin::ApplicationController
   before_filter :verify_logged_in
   layout 'application', only: [:show]
-  expose(:posts) { all_your_posts }
+  expose(:posts) { scoped_posts }
   expose :post, find_by: :slug
   expose(:user) { post.user }
   expose(:posts_presenter) { PostDecorator.decorate_collection(posts) }
@@ -70,7 +70,7 @@ class Admin::PostsController < Admin::ApplicationController
 
   private
 
-  def all_your_posts
+  def scoped_posts
     if params[:search]
       Post.search(params[:search]).all.pub_sorted.paginate(:per_page => 10, :page => params[:page])
     else
@@ -79,6 +79,6 @@ class Admin::PostsController < Admin::ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:title, :category_id, :user_id, :tags, :image, :body, :publish_date)
+    params.require(:post).permit(:title, :category_id, :user_id, :tags, :image, :body, :publish_date, :job_priority)
   end
 end

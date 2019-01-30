@@ -1,0 +1,50 @@
+<div class="about">
+  <% @title = "Projects" %>
+  <div id="about" role="main" class="group">
+    <div class="white mb4">
+      <h1 class="mt-0 display-4 font-weight-bold">Projects</h1>
+      In-depth Case Studies to show you what I can offer and how I work
+    </div>
+  </div>
+</div>
+
+<div id="myCarousel" class="carousel slide " data-ride="carousel" data-interval="0">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <% portfolios_presenter.each_with_index do | portfolio, i | %>
+      <li data-target="#myCarousel" data-slide-to="<%= i %>" class="<%= 'active' if params[:project_id].to_i==i %>" style="background-image: url(<%= portfolio.image.url(:small) %>)"></li>
+    <% end %>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <% portfolios_presenter.each_with_index do | portfolio, i | %>
+      <div class="item <%= 'active' if params[:project_id].to_i==i %>">
+
+        <div class="container">
+          <% @title = "Jonathan Weyermann" %>
+          <div class="carousel-caption">
+            <h1><%= portfolio.name %></h1>
+          </div>
+
+          <%= portfolio.main_image %>
+
+          <div class="center mt1">
+            <%= portfolio.show_link %>
+          </div>
+          <%= render partial: 'portfolio_chunks', locals: { portfolio: portfolio } %>
+          <div class="carousel-caption">
+            <h1>Technologies Used</h1>
+            <h2><%= raw portfolio.description %></h2>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div><!-- /.carousel -->

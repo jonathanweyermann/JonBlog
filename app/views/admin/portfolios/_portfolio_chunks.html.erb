@@ -1,0 +1,49 @@
+<div class="comments">
+	<% portfolio_presenter.decorated_portfolio_chunks.each_slice(3) do |slice| %>
+		<div class="row equal">
+			<% slice.sort_by(&:created_at).each do | chunk | %>
+				<%= render partial: 'portfolio_chunk', locals: { chunk: chunk, portfolio: portfolio_presenter } %>
+			<% end %>
+		</div>
+	<% end %>
+
+	<div class="well add-comment">
+		<h2 class="page-header">Add a new chunk</h2>
+		<a name="comment"></a>
+		<% if flash[:notice] %>
+			 <div class="alert alert-success"><%= flash[:notice] %></div>
+		<% end %>
+		<% if flash[:alert] %>
+			<div class="alert alert-danger"><%= flash[:alert] %></div>
+		<% end %>
+
+
+		<%= form_for [:admin, portfolio, portfolio.portfolio_chunks.build(session[:comment])] do |f| %>
+			<!-- Check for errors -->
+			<% if portfolio.errors.any? %>
+				<% portfolio.errors.full_messages.each do |msg| %>
+					<!-- Show errors -->
+					<div class="alert alert-danger"><%= msg %></div>
+				<% end %>
+			<% end %>
+			<div class="form-group">
+				<%= f.label :name %>
+				<%= f.text_field :name, class:'form-control' %>
+			</div>
+			<div class="form-group">
+				<%= f.label :image %>
+				<%= f.file_field :image %>
+			</div>
+			<div class="form-group">
+				<%= f.label :description %>
+				<%= f.text_area :description, size: "15x40", class:'form-control froala_edit' %>
+			</div>
+			<br>
+
+			<%= f.submit "Submit", class:'btn btn-primary' %>
+			<%=link_to "Cancel", admin_portfolios_path, class:'btn btn-default' %>
+
+		<% end %>
+
+	</div>
+</div>
