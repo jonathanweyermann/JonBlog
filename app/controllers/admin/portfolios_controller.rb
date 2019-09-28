@@ -1,10 +1,8 @@
 class Admin::PortfoliosController < Admin::ApplicationController
-  before_filter :verify_logged_in
-
   expose :portfolio, find_by: :slug
-  expose(:portfolio_presenter) { PortfoliosDecorator.decorate(portfolio)}
+  expose(:portfolio_presenter) { PortfolioDecorator.decorate(portfolio)}
   expose(:portfolios) { Portfolio.all }
-  expose(:portfolios_presenter) { PortfoliosDecorator.decorate_collection(portfolios.priority) }
+  expose(:portfolios_presenter) { PortfoliosDecorator.decorate(portfolios.priority) }
 
   def edit
     if (params[:toggle])
@@ -31,9 +29,7 @@ class Admin::PortfoliosController < Admin::ApplicationController
     end
   end
 
-
   def portfolio_params
     params.require(:portfolio).permit(:name, :description, :image, :link, :priority, :published)
-
   end
 end

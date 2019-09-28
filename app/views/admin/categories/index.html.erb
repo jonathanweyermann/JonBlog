@@ -5,7 +5,7 @@
     <th>Create Date</th>
     <th>Actions</th>
   </tr>
-  <% @categories.each do |category| %>
+  <% categories.each do |category| %>
   <tr>
     <td><%= category.name %></td>
     <td><%= category.created_at.to_time.strftime('%B %e at %l:%M %p') %>
@@ -13,4 +13,4 @@
   </tr>
   <% end %>
 </table>
-<%= will_paginate @categories %>
+<%= will_paginate categories %>

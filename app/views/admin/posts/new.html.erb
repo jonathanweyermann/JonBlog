@@ -1,9 +1,9 @@
 <h2>Create New Post</h2>
 
-<%= form_for [:admin, @post] do |f| %>
+<%= form_for [:admin, post] do |f| %>
 	<!-- Check for errors -->
-	<% if @post.errors.any? %>
-		<% @post.errors.full_messages.each do |msg| %>
+	<% if post.errors.any? %>
+		<% post.errors.full_messages.each do |msg| %>
 			<!-- Show errors -->
 			<div class="alert alert-danger"><%= msg %></div>
 		<% end %>

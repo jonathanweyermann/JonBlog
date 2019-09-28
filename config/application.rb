@@ -37,6 +37,7 @@ module RBlog
        s3_region: config.aws_region
      }
    }
+   config.active_record.raise_in_transactional_callbacks = true
 
    config.middleware.use PDFKit::Middleware, {}, :only => %r[^/resume_print]
   end

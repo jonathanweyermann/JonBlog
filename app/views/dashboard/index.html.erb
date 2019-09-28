@@ -16,30 +16,7 @@
 
 <h2 class="center mb2 mt1">Featured Projects</h2>
 <div class="container">
-
-  <% portfolios_presenter.first(6).each_slice(3).with_index do |slice, i | %>
-    <div class="row equal">
-      <% slice.each_with_index do | portfolio, j | %>
-        <div class="col-sm-4 col-xs-12 mb1">
-          <div class="white-background no-a-underline">
-            <a href="<%= portfolios_path(project_id: 3*i + j) %>">
-              <div class="set-background" style="background-image: url(<%= portfolio.image.url(:small) %>)">
-                <div class="hidden-text"><%= raw portfolio.portfolio_chunks.first.try(:description).try(:truncate, 240) %></div>
-              </div>
-            </a>
-
-            <h3 class="center"><%= portfolio.name %></h3>
-            <div class="center pb1">
-              <% portfolio.technology_description.each do | tech | %>
-                <span class="technology"><%= tech %></span>
-              <% end %>
-            </div>
-          </div>
-        </div>
-      <% end %>
-    </div>
-  <% end %>
-
+  <%= portfolios_presenter.visible_portfolios %>
   <div class="center mt1">
     <%= link_to 'View all Projects', portfolios_path, class: 'btn btn-primary btn-lg center' %>
   </div>
@@ -48,18 +25,8 @@
 <div class="sidebar container">
 
   <h2 class="center mb1 mt1">Latest Blog Posts</h2>
-
-  <% if posts.exists? %>
-    <% posts.each_slice(2) do |slice| %>
-        <div class="row equal">
-          <% slice.each do | post | %>
-            <%= render partial: 'posts/fragment', locals: { post: post, user: post.user} %>
-          <% end %>
-        </div>
-    <% end %>
-    <div class="center">
-      <%= link_to 'View all Posts', posts_path, class: 'btn btn-primary btn-lg center' %>
-    </div>
-  <% end %>
-
+  <%= posts_presenter.visible_posts %>
+  <div class="center">
+    <%= link_to 'View all Posts', posts_path, class: 'btn btn-primary btn-lg center' %>
+  </div>
 </div>

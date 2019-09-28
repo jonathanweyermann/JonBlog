@@ -1,12 +1,7 @@
 class Admin::PortfolioChunksController < Admin::ApplicationController
-  before_filter :verify_logged_in
-
   expose :portfolio, find_by: :slug
   expose :portfolio_chunk, parent: :portfolio
-  expose(:portfolios_presenter) { PortfoliosDecorator.decorate_collection(portfolios.priority) }
-
-  def index
-  end
+  expose(:portfolios_presenter) { PortfoliosDecorator.decorate(portfolios.priority) }
 
   def create
     if portfolio_chunk.save

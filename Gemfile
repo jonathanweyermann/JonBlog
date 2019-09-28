@@ -41,6 +41,7 @@ gem 'simple_form'
 gem 'will_paginate', '~> 3.0'
 gem "paperclip", git: 'git@github.com:thoughtbot/paperclip.git'
 gem "wysiwyg-rails"
+gem 'devise'
 gem "font-awesome-rails"
 gem 'sitemap_generator', '~> 5.0.5'
 gem 'carrierwave'
@@ -53,19 +54,34 @@ gem 'friendly_id'
 gem 'actionpack-page_caching'
 
 group :development, :test do
+  gem 'rspec-rails'
   gem 'pry'
+  gem 'pry-remote'
+  gem 'poltergeist'
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'capybara-webkit'
+  gem 'database_cleaner'
+end
+
+group :test do
+  gem 'shoulda-matchers'
+  gem 'yardstick'
+  gem 'webmock'
+  gem "launchy"
+
 end
 
 group :development do
-  #gem 'better_errors'
-  #gem 'binding_of_caller'
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'capistrano'
   gem 'capistrano-rails'
   gem 'capistrano-passenger'
   gem 'capistrano-rvm'
   gem 'capistrano-bundler'
   gem 'capistrano-linked-files'
-  gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
+  #gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
 end
 
 # Use ActiveModel has_secure_password

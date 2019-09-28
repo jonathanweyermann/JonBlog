@@ -6,9 +6,8 @@
           <div class="">
             <%= image_tag post.image.url, class: 'img-crop' %>
           </div>
-          <small>Posted by <%= user.name  %> on <%= post.visible_published_date.strftime("%B %e, %Y at %l:%m %p") %></small>
+          <small>Posted by <%= post.user.name  %> on <%= post.visible_published_date.strftime("%B %e, %Y at %l:%m %p") %></small>
           <%= raw post.body.truncate(400) %>
-
         </a>
       </div>
   </div>

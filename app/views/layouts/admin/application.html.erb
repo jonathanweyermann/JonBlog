@@ -34,7 +34,7 @@
       <div id="user_nav" class="pull-right">
         <% if current_user %>
           Logged in as <%= current_user.email %>.
-          <%= link_to "Log out", admin_logout_path %>
+          <%= link_to "Log out", destroy_user_session_path, :method => :delete %>
         <% else %>
           <%= link_to "log in", admin_login_path %>
         <% end %>

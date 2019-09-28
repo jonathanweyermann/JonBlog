@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: { registrations: 'admin/users', sessions: 'users/sessions' }
   get 'contact' => 'contacts#new'
   get 'contacts/create'
   get 'resume' => 'resume#index'

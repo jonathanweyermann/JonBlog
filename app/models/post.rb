@@ -1,5 +1,7 @@
 class Post < ActiveRecord::Base
 	extend FriendlyId
+	extend PagedSearchable
+
   friendly_id :title, use: :slugged
 	belongs_to :category
 	belongs_to :user
@@ -13,6 +15,7 @@ class Post < ActiveRecord::Base
 	has_attached_file :image,	storage: :s3
 
 	validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
+
 	def self.search(query)
 		where("title like ? OR body like?", "%#{query}%","%#{query}%")
 	end
