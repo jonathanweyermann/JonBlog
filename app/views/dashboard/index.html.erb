@@ -1,0 +1,32 @@
+<div class="about">
+  <% @title = "Jonathan Weyermann" %>
+  <div id="about" role="main" class="group">
+    <div class="col-sm-3 center">
+        <%= image_tag "jonathan6s.jpg", class: 'full-width' %>
+    </div>
+    <div class="col-sm-9 white center-xs">
+      <div class="lead">Hello, my name is</div>
+      <h1 class="mt-0 display-4 font-weight-bold">Jonathan Weyermann</h1>
+      <div class="bio mt-3">
+        I'm a full-stack developer with four year of professional experience designing and implementing complex scalable web apps. I write about web and personal developed on my blog. Check out my project case studies and resume.
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2 class="center mb2 mt1">Featured Projects</h2>
+<div class="container">
+  <%= portfolios_presenter.visible_portfolios %>
+  <div class="center mt1">
+    <%= link_to 'View all Projects', portfolios_path, class: 'btn btn-primary btn-lg center' %>
+  </div>
+</div>
+
+<div class="sidebar container">
+
+  <h2 class="center mb1 mt1">Latest Blog Posts</h2>
+  <%= posts_presenter.visible_posts %>
+  <div class="center">
+    <%= link_to 'View all Posts', posts_path, class: 'btn btn-primary btn-lg center' %>
+  </div>
+</div>

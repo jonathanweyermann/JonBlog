@@ -1,26 +1,14 @@
 class Admin::ApplicationController < ActionController::Base
+  before_action :authenticate_user!
+  before_action :configure_permitted_parameters, if: :devise_controller?
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery unless: -> { request.format.json? }
   layout 'admin/application'
 
-  helper_method :current_user
-  helper_method :auth_token
+  protected
 
-  def auth_token
-    form_authenticity_token
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:email, :password, :password_confirmation, :name, :encrypted_password])
   end
-
-
-  private
-  	def current_user
-  		@current_user ||=User.find(session[:user_id]) if session[:user_id]
-  	end
-
-  	def verify_logged_in
-  		unless current_user
-  			redirect_to admin_login_path
-  		end
-  	end
-
 end

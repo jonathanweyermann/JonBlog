@@ -1,0 +1,48 @@
+<h2 class="page-header">Manage Portfolio <%= link_to "Create New", new_admin_portfolio_path, class:'btn btn-success pull-right'%></h2>
+<table class="table table-striped hidden-xs" >
+  <tr>
+    <th>Rank</th>
+    <th>Portfolio Name</th>
+    <th>Portfolio Description</th>
+    <th>portfolio Created / Length</th>
+    <th>Actions</th>
+    <th>Chunks</th>
+  </tr>
+  <% portfolios_presenter.each do |portfolio| %>
+    <tr>
+      <td><%= portfolio.priority %></td>
+      <td><%= link_to portfolio.name.truncate(44), edit_admin_portfolio_path(portfolio), class: 'btn btn-primary' %></td>
+      <td>
+       <div class="<%= portfolio.enough_chars %>"><%= portfolio.description.length %> characters long</div></br>
+        <div class="<%= portfolio.image_present_color %>">Main image present: <%= portfolio.image.present? %></div>
+      </td>
+      <td><%= link_to 'View', admin_portfolio_path(portfolio), class: 'btn btn-success' %> <%= link_to "Delete", admin_portfolio_path(portfolio), class:'btn btn-danger', method: :delete, data: {confirm: 'Are you Sure'} %></td>
+      <td><%= link_to portfolio.on_or_off, edit_admin_portfolio_path(portfolio, toggle: true), class:"btn btn-danger #{portfolio.publish_button}" %></td>
+      <td>
+        <%= portfolio.portfolio_chunks.count %>
+        <%= link_to 'Delete all', admin_portfolio_path(portfolio, comments_only: true), class:'btn btn-danger', method: :delete, data: {confirm: 'Are you Sure'} %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+<table class="table table-striped hidden-sm hidden-md hidden-lg" >
+  <tr>
+    <th>Portfolio Title</th>
+    <th>Show</th>
+    <th>Portfolio Last Updated</th>
+  </tr>
+  <% portfolios_presenter.each do |portfolio| %>
+    <tr>
+      <td><%= link_to portfolio.name.truncate(44), edit_admin_portfolio_path(portfolio), class: 'btn btn-primary limit_button_width' %></td>
+      <td>
+        <%= link_to 'View', admin_portfolio_path(portfolio), class: 'btn btn-success' %>
+        <%= link_to portfolio.on_or_off, edit_admin_portfolio_path(portfolio, toggle: true), class:"btn btn-danger #{portfolio.publish_button}" %>
+        <div class="<%= portfolio.enough_chars %>"><%= portfolio.description.length %> chars</br></div>
+        <div class="<%= portfolio.image_present_color %>">Img: <%= portfolio.image.present? %></div>
+      </td>
+      <td>
+        <h5>Upd: <%= portfolio.updated_at.to_time.strftime('%b %e at %l:%M %p') %></h5>
+      </td>
+    </tr>
+  <% end %>
+</table>

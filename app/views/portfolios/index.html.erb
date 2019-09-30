@@ -1,0 +1,27 @@
+<div class="about">
+  <% @title = "Projects" %>
+  <div id="about" role="main" class="group">
+    <div class="white mb4">
+      <h1 class="mt-0 display-4 font-weight-bold">Projects</h1>
+      In-depth Case Studies to show you what I can offer and how I work
+    </div>
+  </div>
+</div>
+
+<div id="myCarousel" class="carousel slide " data-ride="carousel" data-interval="0">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <%= render partial: 'carousel_indicators', collection: portfolios_presenter, as: :portfolio %>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <%= render partial: 'inner_carousel_item', collection: portfolios_presenter, as: :portfolio %>
+  </div>
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div><!-- /.carousel -->

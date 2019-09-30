@@ -1,9 +1,13 @@
 class Admin::CommentsController < Admin::ApplicationController
-  before_filter :verify_logged_in
   expose(:comments ) { Post.friendly.find(params[:post_id]).comments }
+  expose(:comment)
 
   def destroy
-    Comment.find(params[:id]).destroy
-    redirect_to admin_post_comments_path
+    if comment.destroy
+      flash[:notice] = 'Comment removed'
+      redirect_to admin_post_comments_path
+    else
+      flash[:alert] = 'Could not delete'
+    end
   end
 end

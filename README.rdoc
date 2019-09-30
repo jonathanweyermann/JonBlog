@@ -4,5 +4,3 @@
 
 
 Right now you have to manually ensure the production.env is up to date and copy it into the shared folder of the app
-
-scp .env.production ubuntu@ec2-52-11-183-207.us-west-2.compute.amazonaws.com:~/jonblog2/shared/.env.production

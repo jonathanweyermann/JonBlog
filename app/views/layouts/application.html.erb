@@ -5,11 +5,13 @@
   	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   	<%= csrf_meta_tags %>
-    <%= favicon_link_tag 'favicon3.ico' %>
+    <%= favicon_link_tag 'favicon4.ico' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jonathan Weyermann is a full stack web developer currently looking for work. This projects and blog on this site represents his portfolio">
+    <meta name="keyword" content="developer blog, blog, finance blog, investing, web development, ruby on rails">
   </head>
   <body>
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar front-navbar navbar-default" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -18,25 +20,32 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><h1>Jonathan Weyermann</h1></a>
+          <div class="nav navbar-brand">
+            <%= link_to (image_tag "github2.png", width: '35px', class: 'navbar-image-margin'), "https://www.github.com/jonathanweyermann" %>
+            <%= link_to (image_tag "Linkedin.png", width: '35px', class: 'navbar-image-margin'), "https://www.linkedin.com/in/jonathanweyermann/" %>
+          </div>
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
+        <div class="collapse navbar-collapse" id="navbar">
           <ul class="nav navbar-nav">
-            <li class="<%= params[:controller] == 'posts' ? 'active' : '' %>"><%= link_to 'Home', root_path%></li>
-            <li class="<%= params[:controller] == 'about' ? 'active' : '' %>"><%= link_to 'About', about_path%></li>
-            <li class="<%= params[:controller] == 'contacts' ? 'active' : '' %>"><%= link_to 'Contact', contact_path%></li>
+            <li class="<%= params[:controller] == 'dashboard' ? 'active' : '' %>"><%= link_to 'About', root_path%></li>
+            <li class="<%= params[:controller] == 'portfolios' ? 'active' : '' %>"><%= link_to 'Projects', portfolios_path%></li>
+            <li class="<%= params[:controller] == 'posts' ? 'active' : '' %>"><%= link_to 'Blog', posts_path%></li>
+            <li class="<%= params[:controller] == 'about' ? 'active' : '' %>"><%= link_to 'Resume', resume_path%></li>
           </ul>
-          <%= render 'partials/search' %>
+
+          <ul class="nav navbar-nav navbar-right">
+            <%= render 'partials/dropdown' %>
+          </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
     <section>
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-9">
+          <div class="slight-grey-background">
             <%= yield %>
           </div>
-            <div class="col-md-3">
+            <div class="">
               <%= render 'sidebar' %>
             </div>
         </div>

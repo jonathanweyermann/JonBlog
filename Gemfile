@@ -1,3 +1,4 @@
+ruby "2.2.0"
 source 'https://rubygems.org'
 
 gem 'execjs'
@@ -24,6 +25,8 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
+gem 'pdfkit'
+gem 'wkhtmltopdf-binary'
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
@@ -38,6 +41,7 @@ gem 'simple_form'
 gem 'will_paginate', '~> 3.0'
 gem "paperclip", git: 'git@github.com:thoughtbot/paperclip.git'
 gem "wysiwyg-rails"
+gem 'devise'
 gem "font-awesome-rails"
 gem 'sitemap_generator', '~> 5.0.5'
 gem 'carrierwave'
@@ -50,18 +54,34 @@ gem 'friendly_id'
 gem 'actionpack-page_caching'
 
 group :development, :test do
+  gem 'rspec-rails'
   gem 'pry'
+  gem 'pry-remote'
+  gem 'poltergeist'
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'capybara-webkit'
+  gem 'database_cleaner'
+end
+
+group :test do
+  gem 'shoulda-matchers'
+  gem 'yardstick'
+  gem 'webmock'
+  gem "launchy"
+
 end
 
 group :development do
-  #gem 'better_errors'
-  #gem 'binding_of_caller'
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'capistrano'
   gem 'capistrano-rails'
   gem 'capistrano-passenger'
   gem 'capistrano-rvm'
   gem 'capistrano-bundler'
   gem 'capistrano-linked-files'
+  #gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
 end
 
 # Use ActiveModel has_secure_password

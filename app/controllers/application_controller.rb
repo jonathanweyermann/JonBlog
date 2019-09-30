@@ -8,4 +8,8 @@ class ApplicationController < ActionController::Base
   def auth_token
     @form_auth_token = form_authenticity_token
   end
+
+  def after_sign_in_path_for(resource)
+    stored_location_for(resource) || admin_portfolios_path
+  end
 end

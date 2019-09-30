@@ -34,6 +34,19 @@ Rails.application.configure do
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
+  config.aws_region = 'us-west-2'
+
+  config.paperclip_defaults = {
+   storage: :s3,
+   s3_host_name: 's3-us-west-2.amazonaws.com',
+   s3_credentials: {
+     bucket: 'test-bucket',
+     access_key_id: 'test-key',
+     secret_access_key: 'test-access',
+     s3_region: 'test-us-2'
+   }
+ }
+
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end

@@ -1,16 +1,4 @@
-<div id="post-index">
-    <% if posts.exists? %>
-      <% posts.each_slice(2) do |slice| %>
-          <div class="row equal">
-            <% slice.each do | post | %>
-              <%= render partial: 'fragment', locals: { post: post, user: post.user} %>
-            <% end %>
-          </div>
-      <% end %>
-      <div class='digg_pagination'>
-        <h4><%= will_paginate posts %></h4>
-      </div>
-    <% else %>
-      <p>No posts yet</p>
-    <% end %>
+<div id="post-index" class="container">
+  <%= posts_presenter.visible_posts %>
+  <%= posts_presenter.pagination_bar %>
 </div>

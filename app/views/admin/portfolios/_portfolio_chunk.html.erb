@@ -1,0 +1,13 @@
+<div class="col-sm-4 equal">
+	<div class="well">
+		<div class="">
+			<%= image_tag(chunk.image) %>
+		</div>
+		<div class="">
+				<h2><%= chunk.name %><span></h2>
+				<%= raw chunk.description %>
+		</div>
+		<%= link_to 'Edit', edit_admin_portfolio_portfolio_chunk_path(portfolio.slug, chunk.id), class: 'btn btn-success' %>
+		<%= link_to 'Delete', admin_portfolio_portfolio_chunk_path(portfolio.slug, chunk.id), class:'btn btn-danger', method: :delete, data: {confirm: 'Are you Sure'} %>
+	</div>
+</div>

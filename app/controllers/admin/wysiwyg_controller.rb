@@ -1,7 +1,4 @@
 class Admin::WysiwygController < Admin::ApplicationController
-  def new
-  end
-
   def create
     respond_to do |format|
       if img = Wysiwyg.create( image: params["file_name"].tempfile )
