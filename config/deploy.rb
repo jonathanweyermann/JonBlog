@@ -2,7 +2,7 @@
 lock '3.9.0'
 
 set :application, 'jonblog'
-set :repo_url, 'git@bitbucket.org:weyermannx/jonblog.git'
+set :repo_url, 'git@github.com:jonathanweyermann/JonBlog.git'
 
 
 
