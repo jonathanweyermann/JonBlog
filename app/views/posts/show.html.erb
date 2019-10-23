@@ -1,5 +1,5 @@
 <% @title = "#{post.title} - Jonathan Weyermann" %>
-<div class="post-simple container">
+<div class="post-simple container post-container">
 	<h1 class="page-header"><%= post.title %></h1>
 	<small>Posted by <%= user.name %> on <%= post.visible_published_date.strftime('%B %e, %Y at %l:%M %p') %></small>
 	<div>
@@ -10,4 +10,6 @@
 	</div>
 </div>
 
-<%= render 'partials/comments'%>
+<div class="container post-container">
+	<%= render 'partials/comments'%>
+</div>

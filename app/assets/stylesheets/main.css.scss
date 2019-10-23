@@ -9,6 +9,12 @@ body{
 	max-width: 240px;
 }
 
+.post-container {
+	max-width: 700px;
+}
+
+.humans { display: none; }
+
 .subtle-links a {
 	color: #434e5e;
 	text-decoration: none;
@@ -28,6 +34,8 @@ body{
 
 .details {
 	font-size: 18px;
+	display: inline-block;
+	text-align: left
 }
 
 .set-background {
@@ -90,7 +98,7 @@ body{
 
 pre{
 	background-color: #DDDDDD;
-	font-size: 18px;
+	font-size: 16px;
 }
 
 .well {
@@ -295,7 +303,6 @@ pre{
 }
 
 .post{
-	border:1px #ccc solid;
 	background:#FFFFFF;
 	margin-bottom:30px;
 }
@@ -329,7 +336,30 @@ small{
 
 .comments img{
 	width:100%;
-	margin:3px;
+	margin:8px;
+}
+
+.comment_date {
+	font-size: 0.7em;
+	color: grey;
+}
+
+.comment_padding {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.comment_button_padding {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.comment_date:before {
+  content:" • ";
+}
+
+.add-comment {
+	margin-top: 15px;
 }
 
 .center {
@@ -340,6 +370,11 @@ small{
 	.center-xs {
 		text-align: center
 	}
+}
+
+.mtb-1 {
+	margin-top: 4px;
+	margin-bottom: 4px;
 }
 
 .mt1 {
@@ -377,7 +412,7 @@ small{
 }
 
 .slight-grey-background {
-	background-color: #F7F8FA;
+	//background-color: #F7F8FA;
 }
 
 .white-background {
@@ -492,7 +527,6 @@ footer{
 .sidebar {
 	padding: 10px;
 	font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
-	background-color: #F7F8FA;
 }
 
 .unmargin {
@@ -521,7 +555,7 @@ footer{
 
 @media screen and (min-width: 500px) {
 	.post-simple {
-		font-size: 19px;
+		font-size: 21px;
 		font-family: "medium-content-serif-font,Georgia,Cambria,Times New Roman,Times,serif";
 		font-style: normal;
 		font-weight: 400;
@@ -529,6 +563,10 @@ footer{
 		line-height: 1.6em;
 		p {
 			margin: 0 0 19px;
+		}
+		h2 {
+			margin-top: 50px;
+			font-weight: bold;
 		}
 	}
 }
