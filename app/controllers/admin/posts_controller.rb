@@ -1,5 +1,6 @@
 class Admin::PostsController < Admin::ApplicationController
   layout 'application', only: [:show]
+  expose (:latest_posts) { Post.all.visible.pub_sorted.first(8) }
   expose(:posts) { Post.paged_search(params[:page], params[:search]) }
   expose :post, find_by: :slug
   expose(:user) { post.user }
