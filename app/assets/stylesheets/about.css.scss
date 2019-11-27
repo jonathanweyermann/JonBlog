@@ -31,7 +31,8 @@ MOBILE-FIRST STYLING BEGINS HERE
    font-family: Roboto, sans-serif;
    font-size: 100%;
    line-height: 1.5;
-   background-color: #41A4F5;
+   background: linear-gradient(45deg, darkcyan, transparent);
+   background-color: lightseagreen;
    font-size: 1.3em;
  }
 
@@ -124,8 +125,17 @@ MOBILE-FIRST STYLING BEGINS HERE
 }
 
 #about {
+  padding: 2em;
+}
 
-   padding: 2em;
+.dashboard_header {
+  padding: 2em;
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard_header {
+    padding: 1.4em 0.4em 1.4em 0.4em;
+  }
 }
 
 .about section img {

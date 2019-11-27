@@ -1,6 +1,6 @@
 <div class="col-sm-4 col-xs-12 mb1">
   <div class="white-background no-a-underline">
-    <a href="<%= portfolios_path(project_id: 3*portfolio_counter + j) %>">
+    <a href=<%= "#{portfolios_path(project_id: 3*portfolio_counter + j)}#main" %>>
       <div class="set-background" style="background-image: url(<%= portfolio.image.url(:small) %>)">
         <div class="hidden-text"><%= raw portfolio.mouse_over_text %></div>
       </div>

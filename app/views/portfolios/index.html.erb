@@ -13,7 +13,7 @@
   <ol class="carousel-indicators">
     <%= render partial: 'carousel_indicators', collection: portfolios_presenter, as: :portfolio %>
   </ol>
-  <div class="carousel-inner" role="listbox">
+  <div class="carousel-inner" role="listbox" id="main">
     <%= render partial: 'inner_carousel_item', collection: portfolios_presenter, as: :portfolio %>
   </div>
   <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
