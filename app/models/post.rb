@@ -7,6 +7,7 @@ class Post < ActiveRecord::Base
 	belongs_to :user
 	has_many :wysiwygs
 	has_many :comments
+	has_many :post_chunks
 
 	validates :title, presence: true
 	validates :category_id, presence: true

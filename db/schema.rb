@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190929020831) do
+ActiveRecord::Schema.define(version: 20191129054355) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,6 +73,20 @@ ActiveRecord::Schema.define(version: 20190929020831) do
     t.integer  "publish"
   end
 
+  create_table "post_chunks", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "post_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "post_chunks", ["post_id"], name: "index_post_chunks_on_post_id", using: :btree
+
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.integer  "category_id"
@@ -116,4 +130,5 @@ ActiveRecord::Schema.define(version: 20190929020831) do
     t.string   "image"
   end
 
+  add_foreign_key "post_chunks", "posts"
 end

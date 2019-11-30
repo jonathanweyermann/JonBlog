@@ -17,7 +17,7 @@
         <%= post.visible_published_date.strftime('%B %e at %l:%M %p') %> - <div class="<%= post.enough_chars %>"><%= post.body.length %> characters long</div></br>
         <div class="<%= post.image_present_color %>">Main image present: <%= post.image.present? %></div>
       </td>
-      <td><%= link_to 'View', post_path(post), class: 'btn btn-success' %> <%= link_to "Delete", admin_post_path(post), class:'btn btn-danger', method: :delete, data: {confirm: 'Are you Sure'} %></td>
+      <td><%= link_to 'View', admin_post_path(post), class: 'btn btn-success' %> <%= link_to "Delete", admin_post_path(post), class:'btn btn-danger', method: :delete, data: {confirm: 'Are you Sure'} %></td>
       <td><%= link_to post.on_or_off, edit_admin_post_path(post, toggle: true), class:"btn btn-danger #{post.publish_button}" %></td>
       <td>
         <h5>Updated: <%= post.updated_at.to_time.strftime('%B %e at %l:%M %p') %></h5>

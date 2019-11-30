@@ -1,8 +1,8 @@
 <div class="comments">
-	<% portfolio_presenter.decorated_portfolio_chunks.each_slice(3) do |slice| %>
+	<% post.post_chunks.each_slice(3) do |slice| %>
 		<div class="row equal">
 			<% slice.sort_by(&:created_at).each do | chunk | %>
-				<%= render partial: 'portfolio_chunk', locals: { chunk: chunk, portfolio: portfolio_presenter } %>
+				<%= render partial: 'post_chunk', locals: { chunk: chunk, post: post } %>
 			<% end %>
 		</div>
 	<% end %>
@@ -18,10 +18,10 @@
 		<% end %>
 
 
-		<%= form_for [:admin, portfolio, portfolio.portfolio_chunks.build] do |f| %>
+		<%= form_for [:admin, post, post.post_chunks.build] do |f| %>
 			<!-- Check for errors -->
-			<% if portfolio.errors.any? %>
-				<% portfolio.errors.full_messages.each do |msg| %>
+			<% if post.errors.any? %>
+				<% post.errors.full_messages.each do |msg| %>
 					<!-- Show errors -->
 					<div class="alert alert-danger"><%= msg %></div>
 				<% end %>
@@ -41,7 +41,7 @@
 			<br>
 
 			<%= f.submit "Submit", class:'btn btn-primary' %>
-			<%=link_to "Cancel", admin_portfolios_path, class:'btn btn-default' %>
+			<%=link_to "Cancel", admin_posts_path, class:'btn btn-default' %>
 
 		<% end %>
 

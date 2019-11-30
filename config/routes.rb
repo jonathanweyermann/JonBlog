@@ -127,6 +127,7 @@ Rails.application.routes.draw do
     end
     resources :posts do
       resources :comments
+      resources :post_chunks
     end
   end
 
