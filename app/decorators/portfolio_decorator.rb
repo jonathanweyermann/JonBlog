@@ -40,7 +40,7 @@ class PortfolioDecorator < Draper::Decorator
 
   def show_link
     if object.link.present?
-      h.link_to 'View Live Site', object.link, class: 'btn btn-primary btn-lg center'
+      h.link_to 'View Site', object.link, class: 'btn btn-primary btn-lg center'
     end
   end
 
