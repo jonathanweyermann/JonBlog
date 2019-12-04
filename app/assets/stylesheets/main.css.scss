@@ -99,15 +99,27 @@ body{
 	}
 }
 
-.carousel-caption {
+.full-width-up-to {
+	width: 100vw;
+	text-align: center;
+	display: block;
+}
+
+.carousel-caption.carousel-text {
 	position: unset;
 	color: #848484;
   top: 14px;
   bottom: auto;
 }
+.carousel-caption.carousel-title {
+  bottom: auto;
+}
 .carousel-control {
-	height: 500px;
-	opacity: 0;
+	height: 100vh;
+	opacity: 0.9;
+	position: fixed;
+	width: 130px;
+	z-index: 2000;
 }
 
 pre{
@@ -472,6 +484,10 @@ small{
 		margin-left: 1px;
 	}
 
+	.carousel-control {
+		width: 70px;
+	}
+
 	.carousel-indicators {
 		top: -260px;
 	}
@@ -484,6 +500,10 @@ small{
 
 	.carousel-indicators {
 		top: -320px;
+	}
+
+	.carousel-control {
+		width: 40px;
 	}
 }
 
