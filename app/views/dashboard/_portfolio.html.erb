@@ -1,14 +1,16 @@
-<div class="col-sm-4 col-xs-12 mb1">
+<div class="col-md-6 col-lg-4 col-xs-12 no-padding">
   <div class="white-background no-a-underline">
-    <a href=<%= "#{portfolios_path(project_id: 3*portfolio_counter + j)}#main" %>>
-      <div class="set-background" style="background-image: url(<%= portfolio.image.url(:small) %>)">
-        <div class="hidden-text"><%= raw portfolio.mouse_over_text %></div>
+    <a href=<%= "#{portfolios_path(project_id: portfolio_counter + j*3)}#main" %>>
+      <div class="set-background" style="background-image: url(<%= portfolio.image.url(:medium) %>)">
+        <div class="hidden-text">
+          <h3 class="center"><%= portfolio.name %></h3>
+          <div class="center pb1">
+            <%= render partial: 'tech_description', collection: portfolio.technology_description, as: :tech %>
+          </div>
+        </div>
       </div>
     </a>
 
-    <h3 class="center"><%= portfolio.name %></h3>
-    <div class="center pb1">
-      <%= render partial: 'tech_description', collection: portfolio.technology_description, as: :tech %>
-    </div>
+
   </div>
 </div>

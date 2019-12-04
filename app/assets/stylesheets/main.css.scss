@@ -10,7 +10,7 @@ body{
 }
 
 .post-container {
-	max-width: 700px;
+	max-width: 850px;
 }
 
 .thumb-small {
@@ -44,32 +44,46 @@ body{
 }
 
 .set-background {
-	background-size: contain;
+	background-size: cover;
 	background-repeat: no-repeat;
 	width: 100%;
 	height: 0;
-	padding-top: 49.64%
+	padding-top: 73%
+}
+
+.no-padding {
+	padding: 0;
+	margin-bottom: -25px;
 }
 
 .hidden-text{
 	width:100%;
 	margin-top:-170px;
-	background:#FFF;
 	opacity:0;
+	visibility: hidden;
 	text-decoration: none;
+	transition: visibility 0s, opacity 0.65s linear;
 }
 
 .set-background:hover .hidden-text {
-  opacity:0.6;
+	visibility: visible;
+  opacity:1;
   text-align:justify;
 
-  color:#000000;
+  color:#FFFFFF;
+	text-shadow: 2px 2px #000000;
   font-size:20px;
   font-weight:700;
   font-family:"Times New Roman", Times, serif;
-  margin-top:-170px;
+  margin-top:-240px;
 	text-decoration: none;
 }
+.set-background:hover .hidden-text h3 {
+	visibility: visible;
+  padding: 20px 0 0 0;
+	font-size: 32px;
+}
+
 
 .no-a-underline > a {
 	text-decoration: none !important;
@@ -90,15 +104,31 @@ body{
 	}
 }
 
-.carousel-caption {
+.full-width-up-to {
+	width: 100vw;
+	text-align: center;
+	display: block;
+}
+
+.carousel-caption.carousel-text {
 	position: unset;
 	color: #848484;
   top: 14px;
   bottom: auto;
 }
+.carousel-caption.carousel-title {
+  bottom: auto;
+}
 .carousel-control {
-	height: 500px;
-	opacity: 0;
+	height: 100vh;
+	opacity: 0.9;
+	position: fixed;
+	width: 130px;
+	z-index: 2000;
+}
+
+.btn-lg {
+	font-size: 25px;
 }
 
 pre{
@@ -110,25 +140,7 @@ pre{
 	background-color: #FBFBFB
 }
 
-/**
-.navbar-toggle {
-    background: url(../images/bars.svg) no-repeat left top;
-    background-image: url(../images/bars.svg);
-    background-position-x: left;
-    background-position-y: top;
-    background-size: initial;
-    background-repeat-x: no-repeat;
-    background-repeat-y: no-repeat;
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
-    background-color: initial;
-    height: 20px;
-    width: 24px;
-}
- * CSS image crop. Forces image to 4:3 aspect ratio cropping at the middle.
- * http://dabblet.com/gist/4711695
- */
+
 .img-crop,
 .img-crop img{
 	width: 100%; /* gotta be responsive these days */
@@ -391,6 +403,10 @@ small{
 	margin-top: 25px;
 }
 
+.mt2 {
+	margin-top: 55px;
+}
+
 .mb1 {
 	margin-bottom: 25px;
 }
@@ -410,6 +426,11 @@ small{
 .mlr-2 {
 	margin-left: 10px;
 	margin-right: 10px;
+}
+
+.mlr-4 {
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
 .mtb-5 {
@@ -477,6 +498,10 @@ small{
 		margin-left: 1px;
 	}
 
+	.carousel-control {
+		width: 70px;
+	}
+
 	.carousel-indicators {
 		top: -260px;
 	}
@@ -489,6 +514,10 @@ small{
 
 	.carousel-indicators {
 		top: -320px;
+	}
+
+	.carousel-control {
+		width: 40px;
 	}
 }
 
@@ -551,6 +580,12 @@ footer{
 	max-width: 100px;
 }
 
+.image-formatting {
+	max-width:100%;
+	max-height:100%;
+
+}
+
 @media only screen and (max-width: 500px) {
 	h1 {
 		font-size: 2.2em;
@@ -561,11 +596,14 @@ footer{
 	h3 {
 		font-size: 1.3em;
 	}
+	.post-simple {
+	  line-height: 1.6em;
+  }
 }
 
 @media screen and (min-width: 500px) {
 	.post-simple {
-		font-size: 21px;
+		font-size: 24px;
 		font-family: "medium-content-serif-font,Georgia,Cambria,Times New Roman,Times,serif";
 		font-style: normal;
 		font-weight: 400;

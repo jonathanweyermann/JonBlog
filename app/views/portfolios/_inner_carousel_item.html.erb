@@ -1,15 +1,17 @@
 <div class="item <%= portfolio.currently_active(portfolio_counter) %>">
   <div class="container">
     <% @title = "Jonathan Weyermann" %>
-    <div class="carousel-caption">
+    <div class="carousel-caption carousel-title">
       <h1><%= portfolio.name %></h1>
     </div>
-    <%= portfolio.main_image %>
-    <div class="center mt1">
+  </div>
+    <div class="center"><div class="full-width-up-to"><%= portfolio.main_image %></div></div>
+  <div class="container">
+    <div class="center mt2">
       <%= portfolio.show_link %>
     </div>
     <%= render partial: 'portfolio_chunks', locals: { portfolio: portfolio } %>
-    <div class="carousel-caption">
+    <div class="carousel-caption carousel-text">
       <h1>Technologies Used</h1>
       <h2><%= raw portfolio.description %></h2>
     </div>
