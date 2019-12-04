@@ -26,7 +26,7 @@ class PortfolioDecorator < Draper::Decorator
     if object.link.present?
       h.link_to h.image_tag(object.image.url(:medium), width: '100%'), object.link
     else
-      h.image_tag object.image.url, width: '100%'
+      h.image_tag(object.image.url(:medium), width: '100%')
     end
   end
 
