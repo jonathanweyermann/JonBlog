@@ -59,16 +59,18 @@ body{
 .hidden-text{
 	width:100%;
 	margin-top:-170px;
-	background:#FFF;
 	opacity:0;
+	visibility: hidden;
 	text-decoration: none;
+	transition: visibility 0s, opacity 0.65s linear;
 }
 
 .set-background:hover .hidden-text {
-  opacity:0.75;
+	visibility: visible;
+  opacity:1;
   text-align:justify;
 
-  color:#000000;
+  color:#FFFFFF;
   font-size:20px;
   font-weight:700;
   font-family:"Times New Roman", Times, serif;
@@ -76,9 +78,11 @@ body{
 	text-decoration: none;
 }
 .set-background:hover .hidden-text h3 {
+	visibility: visible;
   padding: 20px 0 0 0;
 	font-size: 32px;
 }
+
 
 .no-a-underline > a {
 	text-decoration: none !important;
