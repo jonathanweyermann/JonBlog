@@ -33,7 +33,7 @@
 		<%= f.file_field :image %>
 	</div>
 	<% if post.image.present? %>
-		<%= image_tag post.image.url, width:'100%' %>
+		<%= image_tag post_presenter.image, width:'100%' %>
 	<% end %>
 	<br>
 	<div class="form-group">

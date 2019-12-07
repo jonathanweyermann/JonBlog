@@ -8,7 +8,7 @@
 		<%= raw post.body %>
 		</p>
 	</div>
-	<%= render partial: 'post_chunks', locals: { post: post } %>
+	<%= render partial: 'post_chunks', locals: { post: post.decorate } %>
 </div>
 
 <div class="container post-container">

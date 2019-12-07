@@ -38,7 +38,8 @@ module RBlog
      }
    }
    config.active_record.raise_in_transactional_callbacks = true
-
+   config.cloudfront_host = "https://dqdeqb9vb8p5i.cloudfront.net"
+   config.s3_bucket_url = '//s3-us-west-2.amazonaws.com/jonathanweyermannblog'
    config.middleware.use PDFKit::Middleware, {}, :only => %r[^/resume_print]
   end
 end

@@ -1,4 +1,4 @@
-class PostDecorator < Draper::Decorator
+class PostDecorator < MainDecorator
   delegate_all
 
   def posted_color
@@ -20,5 +20,13 @@ class PostDecorator < Draper::Decorator
   def enough_chars
     return "green-background" if object.body.length > 4000
     object.body.length < 2500 ? "red-background" : "orange-background"
+  end
+
+  def image
+    to_cloudfront(object.image)
+  end
+
+  def decorated_post_chunks
+    PostChunksDecorator.decorate_collection(object.post_chunks)
   end
 end
