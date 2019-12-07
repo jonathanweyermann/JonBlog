@@ -165,7 +165,8 @@ pre{
 }
 
 .navbar{
-
+	position: relative;
+	z-index: 2400;
 	min-height:100px;
 	background:#0A71C6;
 	color:#fff;

@@ -2,7 +2,7 @@ module PagedSearchable
   extend ActiveSupport::Concern
 
 	def paged_search(page, query)
-		if_searched(query).order('created_at DESC').paginate(per_page: 10, page: page)
+		if_searched(query).pub_sorted.paginate(per_page: 10, page: page)
 	end
 
 	private
