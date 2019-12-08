@@ -48,7 +48,7 @@ body{
 	background-repeat: no-repeat;
 	width: 100%;
 	height: 0;
-	padding-top: 73%
+	padding-top: 73%;
 }
 
 .no-padding {
@@ -77,11 +77,21 @@ body{
   font-family:"Times New Roman", Times, serif;
   margin-top:-240px;
 	text-decoration: none;
+	transform: scale(0.7);
 }
+
+.set-background:hover {
+	filter: contrast(215%);
+  transform: scale(1.35);
+	transition: 0.4s;
+  opacity: .75;
+}
+
 .set-background:hover .hidden-text h3 {
 	visibility: visible;
   padding: 20px 0 0 0;
 	font-size: 32px;
+	transform: scale(0.7);
 }
 
 
@@ -449,6 +459,7 @@ small{
 
 .white-background {
 	background-color: #FFFFFF;
+	overflow: hidden;
 }
 
 .left-right-padding {
