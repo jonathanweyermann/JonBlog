@@ -1,4 +1,4 @@
-class PortfolioDecorator < Draper::Decorator
+class PortfolioDecorator < MainDecorator
   delegate_all
 
   def posted_color
@@ -24,7 +24,7 @@ class PortfolioDecorator < Draper::Decorator
 
   def main_image
     if object.link.present?
-      h.link_to h.image_tag(object.image.url(:medium), width: '100%'), object.link
+      h.link_to h.image_tag(to_cloudfront(object.image.url(:medium)), width: '100%'), object.link
     else
       h.image_tag(object.image.url(:medium), width: '100%')
     end

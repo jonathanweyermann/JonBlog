@@ -3,6 +3,7 @@ class Admin::PostsController < Admin::ApplicationController
   expose (:latest_posts) { Post.all.visible.pub_sorted.first(8) }
   expose(:posts) { Post.paged_search(params[:page], params[:search]) }
   expose :post, find_by: :slug
+  expose (:post_presenter) { post.decorate }
   expose(:user) { post.user }
   expose(:posts_presenter) { PostDecorator.decorate_collection(posts) }
 
