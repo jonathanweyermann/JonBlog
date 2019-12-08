@@ -1,5 +1,5 @@
 <div class="comments">
-	<% post.decorated_post_chunks.each_slice(3) do |slice| %>
+	<% post_presenter.decorated_post_chunks.each_slice(3) do |slice| %>
 		<div class="row equal">
 			<% slice.sort_by(&:created_at).each do | chunk | %>
 				<%= render partial: 'post_chunk', locals: { chunk: chunk, post: post } %>
