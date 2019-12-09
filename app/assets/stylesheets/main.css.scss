@@ -74,7 +74,7 @@ body{
   color:#FFFFFF;
 	text-shadow: 2px 2px #000000;
   font-size:20px;
-  font-weight:700;
+
   font-family:"Times New Roman", Times, serif;
   margin-top:-240px;
 	text-decoration: none;
@@ -91,7 +91,7 @@ body{
 .set-background:hover .hidden-text h3 {
 	visibility: visible;
   padding: 20px 0 0 0;
-	font-size: 32px;
+	font-size: 42px;
 	transform: scale(0.7);
 }
 
@@ -139,7 +139,7 @@ body{
 }
 
 .btn-lg {
-	font-size: 25px;
+	font-size: 22px;
 }
 
 pre{
@@ -157,7 +157,6 @@ pre{
 	width: 100%; /* gotta be responsive these days */
 	height: 250px;
 	object-fit: cover;
-	transition: 0.5s;
 }
 
 .img-crop-surround {
@@ -165,8 +164,6 @@ pre{
 }
 
 .img-crop:hover {
-	transform: scale(1.1);
-	transition: 0.5s;
 	border-width: 3px;
 	border-color: red;
 }
@@ -350,7 +347,13 @@ pre{
 
 .post-content{
 	padding:20px;
+	transition: 0.5s;
 	box-sizing:border-box;
+}
+
+.post-content:hover {
+	transition: 0.5s;
+	transform: scale(1.02);
 }
 
 .post h3{

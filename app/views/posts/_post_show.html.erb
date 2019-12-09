@@ -16,9 +16,8 @@
 </div>
 
 <div class="sidebar container">
-
-  <h2 class="center mb1 mt1">Latest Blog Posts</h2>
-  <%= limited_posts_presenter.visible_posts %>
+	<hr />
+  <%= limited_posts_presenter.visible_except_current(post.id) %>
   <div class="center">
     <%= link_to 'View all Posts', posts_path, class: 'btn btn-primary btn-lg center' %>
   </div>
