@@ -1,145 +1,292 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<!--XML Sitemap created by the unregistered version of Sitemap Automator http://www.ragesw.com-->
-	<url>
-		<loc>http://www.jonathanweyermann.com</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/about</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/contact</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/posts/automating-your-financial-success</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/posts/ingredients-to-early-financial-independence</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/posts/7-reasons-to-write-a-blog</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/posts/why-you-should-save-and-invest-as-if-you-were-retiring-early</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/posts/how-to-force-yourself-to-post-regularly</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/posts/the-compounding-principle-and-the-power-of-habit</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/posts/getting-started-quickly-with-an-amazon-ec2-ruby-on-rails-box</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/posts/creating-vs-consumption-and-happiness</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/posts/my-5-top-tips-to-becoming-a-better-software-developer</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/posts/6-investment-mistakes-to-avoid</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/posts/the-fermi-paradox</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/posts/hosting-an-inexpensive-static-website-with-amazon-s3</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/posts/lending-loop-experiment</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/posts/five-ways-of-beating-procrastination</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/posts/dream-trainer-ruby-app</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/posts/teamviz</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/posts/the-importance-of-bounded-time</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/posts/buildbox</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/posts/pragmatic-thinking-and-learning</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/posts/in-search-of-an-android-wiki</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/posts/winter-delight</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/posts/index?page=2</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/posts/index?page=3</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/posts/winter-delight</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/posts/index?page=1</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/posts/the-fermi-paradox</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/posts/hosting-an-inexpensive-static-website-with-amazon-s3</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/posts/lending-loop-experiment</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/posts/five-ways-of-beating-procrastination</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/posts/dream-trainer-ruby-app</loc>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>http://www.jonathanweyermann.com/posts/16</loc>
-		<priority>0.5</priority>
-	</url>
-<!--XML Sitemap created by Sitemap Automator http://www.ragesw.com-->
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>http://www.jonathanweyermann.com/</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/portfolios</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/resume</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/creating-a-pdf-conversion-tool-using-serverless-and-amplify-part-1-serverless-pdf-processing-lambda</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/creating-a-pdf-conversion-tool-using-serverless-and-amplify-part-3-more-react-component</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/creating-a-pdf-conversion-tool-using-serverless-and-amplify</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/rails-page-caching-for-improved-performance</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/creating-a-nested-comment-system-in-rails</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/getting-started-quickly-with-an-amazon-ec2-ruby-on-rails-box</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/my-5-top-tips-to-becoming-a-better-software-developer</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/hosting-an-inexpensive-static-website-with-amazon-s3</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/portfolios?project_id=0</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/portfolios?project_id=1</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/portfolios?project_id=2</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/portfolios?project_id=3</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/portfolios?project_id=4</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/portfolios?project_id=5</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/users/sign_in</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/buildbox</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/pragmatic-thinking-and-learning</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/index?page=2</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/index?page=3</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/index?page=4</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/resume_print.pdf</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/creating-a-nested-comment-system-in-rails?comment_id=8334</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/creating-a-nested-comment-system-in-rails?comment_id=8335</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/in-search-of-an-android-wiki</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/enjoying-the-mundane-moments-in-life-338ab9a1-d225-40c3-90ed-47ca420a8b4d</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/the-no-regrets-at-80-plan</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/enjoying-the-mundane-moments-in-life</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/7-reasons-to-write-a-blog</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/why-you-should-save-and-invest-as-if-you-were-retiring-early</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/how-to-force-yourself-to-post-regularly</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/the-compounding-principle-and-the-power-of-habit</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/creating-vs-consumption-and-happiness</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/6-investment-mistakes-to-avoid</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/staying-healthy-at-work-by-standing-and-walking-more</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/index?page=1</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/getting-of-debt-advice</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/discipline-is-good-removing-the-temptation-is-better</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/automating-your-financial-success</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/ingredients-to-early-financial-independence</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/the-fermi-paradox</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/lending-loop-experiment</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/five-ways-of-beating-procrastination</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/teamviz</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/the-importance-of-bounded-time</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/the-easiest-ways-to-make-money</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/why-cloudmining-with-hashflare-is-inadvisable</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/swiss-borg-crypto-wealth-management</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/how-to-buy-ripple</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/should-you-invest-in-cryptocurrency</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/winter-delight</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/winter-delight?comment_id=7</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://www.jonathanweyermann.com/posts/winter-delight?comment_id=1360</loc>
+  <lastmod>2019-12-09T04:17:17+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+
+
 </urlset>
