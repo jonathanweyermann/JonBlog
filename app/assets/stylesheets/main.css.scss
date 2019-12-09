@@ -157,6 +157,18 @@ pre{
 	width: 100%; /* gotta be responsive these days */
 	height: 250px;
 	object-fit: cover;
+	transition: 0.5s;
+}
+
+.img-crop-surround {
+	overflow: hidden;
+}
+
+.img-crop:hover {
+	transform: scale(1.1);
+	transition: 0.5s;
+	border-width: 3px;
+	border-color: red;
 }
 
 .equal {
