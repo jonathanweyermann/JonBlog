@@ -37,6 +37,7 @@ MOBILE-FIRST STYLING BEGINS HERE
    background: url(asset_path("banner.jpg"));
    height: calc(100vh - 100px);
    background-repeat: no-repeat;
+   background-size: cover;
  }
 
  .project-header {
