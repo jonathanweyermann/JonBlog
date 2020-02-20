@@ -7,6 +7,10 @@ body{
 .full-width {
 	width: 100%;
 	max-width: 240px;
+	border-radius: 900px;
+	border: 8px solid;
+	padding: -1px;
+	border-color: #222;
 }
 
 .post-container {
