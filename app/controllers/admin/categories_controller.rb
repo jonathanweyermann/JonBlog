@@ -1,5 +1,5 @@
 class Admin::CategoriesController < Admin::ApplicationController
-  expose(:categories ) { Category.paged_search(params[:page], params[:search]) }
+  expose(:categories ) { Category.all }
   expose(:category)
 
   def create

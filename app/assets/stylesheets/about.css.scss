@@ -3,22 +3,25 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 * {
-   -webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 
 .group:before,
 .group:after {
-   content:"";
-   display:table;
+  content: "";
+  display: table;
 }
+
 .group:after {
-   clear:both;
+  clear: both;
 }
+
 .group {
-   zoom:1; /* For IE 6/7 (trigger hasLayout) */
+  zoom: 1;
+  /* For IE 6/7 (trigger hasLayout) */
 }
 
 
@@ -28,46 +31,72 @@ MOBILE-FIRST STYLING BEGINS HERE
 
 
 .about {
-   font-family: Roboto, sans-serif;
-   font-size: 100%;
-   line-height: 1.5;
-   background: linear-gradient(45deg, darkcyan, transparent);
-   background-color: lightseagreen;
-   font-size: 1.5em;
-   background: url(asset_path("background.jpg"));
-   height: calc(100vh - 100px);
-   background-repeat: no-repeat;
-   background-size: cover;
-   padding-top: 200px;
- }
-
- .project-header {
-   font-family: Roboto, sans-serif;
-   font-size: 100%;
-   line-height: 1.5;
-   background: linear-gradient(45deg, darkcyan, transparent);
-   background-color: lightseagreen;
-   font-size: 1.3em;
- }
-
- .white {
-   color: white;
- }
+  font-family: Roboto, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  background: linear-gradient(45deg, darkcyan, transparent);
+  background-color: lightseagreen;
+  font-size: 1.5em;
+  //  background: url(asset_path("background.jpg"));
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  //background: darkblue;
+  height: calc(100vh - 100px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 125px;
+}
 
 
 
-.about h1, .about h2 {
-   font-family: Roboto;
-   line-height: 0.9;
-   margin-top: 7px;
+.project-header {
+  font-family: Roboto, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  background: linear-gradient(45deg, darkcyan, transparent);
+  background-color: lightseagreen;
+  font-size: 1.3em;
+}
+
+.white {
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.about h1,
+.about h2 {
+  font-family: Roboto;
+  line-height: 0.9;
+  margin-top: 7px;
 }
 
 .about h1 {
-   font-size: 3em;
+  font-size: 3em;
 }
 
 .about h2 {
-   font-size: 3em;
+  font-size: 3em;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex1 {
+  flex: 1;
+  font-size: 45px;
+}
+
+.flex2 {
+  flex: 2;
+}
+
+hr {
+  color: red;
+  border-top: 2px solid;
 }
 
 .rounded {
@@ -78,9 +107,17 @@ MOBILE-FIRST STYLING BEGINS HERE
   font-family: 'raleway-bold';
 }
 
+.smaller {
+  font-size: 17px;
+}
+
 .red-text {
   color: red;
   text-shadow: 1px 1px #fff;
+}
+
+.btn-primary {
+  background: #ff953f;
 }
 
 .bio {
@@ -93,6 +130,7 @@ MOBILE-FIRST STYLING BEGINS HERE
   }
 
 }
+
 @media screen and (max-width: 1059px) {
   .about {
     font-size: 1.0em;
@@ -103,18 +141,20 @@ MOBILE-FIRST STYLING BEGINS HERE
 @media screen and (max-width: 991px) {
   .about {
     height: calc(100vh - 50px);
-    padding-top: 200px;
+    padding-top: 125px;
   }
 
 }
 
 @media screen and (max-width: 768px) {
   .about h2 {
-     font-size: 2.5em;
+    font-size: 2.5em;
   }
+
   .about h1 {
-     font-size: 2.5em;
+    font-size: 2.5em;
   }
+
   .about {
     height: calc(100vh - 50px);
     padding-top: 0px;
@@ -122,61 +162,61 @@ MOBILE-FIRST STYLING BEGINS HERE
 }
 
 .about a {
-   color: #f03;
-   text-decoration: none;
+  color: #f03;
+  text-decoration: none;
 }
 
 .about a:hover {
-   color: #444;
-   text-decoration: underline;
+  color: #444;
+  text-decoration: underline;
 }
 
 .about a.btn {
-   display: inline-block;
-   text-transform: uppercase;
-   background: #f03;
-   color: white;
-   margin: 1em;
-   padding: 1em 2em;
-   margin: auto;
-   -webkit-border-radius: 2em;
-      -moz-border-radius: 2em;
-           border-radius: 2em;
+  display: inline-block;
+  text-transform: uppercase;
+  background: #f03;
+  color: white;
+  margin: 1em;
+  padding: 1em 2em;
+  margin: auto;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
 }
 
 .about a.btn:hover {
-   background: #444;
-   text-decoration: none;
+  background: #444;
+  text-decoration: none;
 }
 
 .about header {
-   background: #e9e9e9;
-   padding: 3em 1em;
-   text-align: center;
-   border-top: 0.25em solid #f03;
+  background: #e9e9e9;
+  padding: 3em 1em;
+  text-align: center;
+  border-top: 0.25em solid #f03;
 }
 
 .about header p {
-   margin-bottom: 2em;
+  margin-bottom: 2em;
 }
 
 .about p {
-	font-size: 1.3em;
+  font-size: 1.3em;
 }
 
 
 .about #aboutfields p {
-	font-size: 0.85em;
+  font-size: 0.85em;
 }
 
 .about blockquote {
-   margin: 0;
-   padding: 3em;
-   background: #2376CF;
-   font-family: georgia;
-   font-size: 1.5em;
-   text-align: center;
-   color: white;
+  margin: 0;
+  padding: 3em;
+  background: #2376CF;
+  font-family: georgia;
+  font-size: 1.5em;
+  text-align: center;
+  color: white;
 }
 
 #about {
@@ -194,24 +234,24 @@ MOBILE-FIRST STYLING BEGINS HERE
 }
 
 .about section img {
-   background: #e9e9e9;
-   margin-top: 1.5em;
-   width: 100%;
-   -webkit-border-radius: 2em;
-      -moz-border-radius: 2em;
-           border-radius: 2em;
+  background: #e9e9e9;
+  margin-top: 1.5em;
+  width: 100%;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
 }
 
 .about footer#credits {
-   text-align: center;
-   background: #f03;
-   color: white;
-   padding: 2em;
+  text-align: center;
+  background: #f03;
+  color: white;
+  padding: 2em;
 }
 
 .about p,
 pre {
-    margin: 1em 0;
+  margin: 1em 0;
 }
 
 .post-container pre {
@@ -224,25 +264,28 @@ MEDIA QUERIES FOR LARGER BREAKPOINTS BEGIN HERE
 - - - - - - - - - - - - - - - - - - - - - - - - */
 
 @media screen and (min-width: 720px) {
-	#about {
-		margin-right: 5%;
-		margin-left: 5%;
-	}
-	.about section {
-		width: 45.5%;
-		margin-left: 3.9%;
-		float: left;
-	}
-	.about section:first-child {
-		margin-left: 0;
-	}
-	.about section:last-child {
-		margin-right:0;
-	}
+  #about {
+    margin-right: 5%;
+    margin-left: 5%;
+  }
 
-	.about #aboutfields {
-		width: 45%;
-		margin-left: 3%;
-		float: left;
-	}
+  .about section {
+    width: 45.5%;
+    margin-left: 3.9%;
+    float: left;
+  }
+
+  .about section:first-child {
+    margin-left: 0;
+  }
+
+  .about section:last-child {
+    margin-right: 0;
+  }
+
+  .about #aboutfields {
+    width: 45%;
+    margin-left: 3%;
+    float: left;
+  }
 }

@@ -1,12 +1,13 @@
-ruby "2.2.0"
+ruby "2.3.8"
 source 'https://rubygems.org'
 
-gem 'execjs'
+gem 'execjs', '<= 2.2'
 gem 'therubyracer'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails'
+gem 'rails', "4.2.9"
+gem 'loofah', '~>2.19.1'
 # Use sqlite3 as the database for Active Record
-gem 'pg'
+gem 'pg', '0.18.4'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -34,12 +35,13 @@ gem 'spring',        group: :development
 gem 'decent_exposure'
 gem 'draper'
 gem 'bootstrap-sass', '~> 3.2.0'
-gem 'autoprefixer-rails'
+gem 'autoprefixer-rails', '8.6.5'
 gem 'bcrypt-ruby', :require => "bcrypt"
 gem 'mail_form'
 gem 'simple_form'
 gem 'will_paginate', '~> 3.0'
-gem "paperclip", git: 'git@github.com:thoughtbot/paperclip.git'
+gem 'paperclip-aws', '~> 1.6', '>= 1.6.8'
+# gem "paperclip", git: 'https://github.com/jonathanweyermann/paperclip.git', branch: 'main'
 gem "wysiwyg-rails"
 gem 'devise'
 gem "font-awesome-rails"
@@ -47,7 +49,8 @@ gem 'sitemap_generator', '~> 5.0.5'
 gem 'carrierwave'
 gem 'seed_dump'
 gem 'dotenv-rails'
-gem 'aws-sdk', '~> 2.3.0'
+gem 'aws-sdk'
+gem 'aws-sdk-s3'
 gem 'validates_email_format_of'
 gem 'friendly_id'
 
@@ -59,8 +62,8 @@ group :development, :test do
   gem 'pry-remote'
   gem 'poltergeist'
   gem 'factory_girl_rails'
-  gem 'capybara'
-  gem 'capybara-webkit'
+#  gem 'capybara'
+#  gem 'capybara-webkit'
   gem 'database_cleaner'
 end
 
@@ -75,7 +78,7 @@ end
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'capistrano'
+  gem 'capistrano', '3.9.0'
   gem 'capistrano-rails'
   gem 'capistrano-passenger'
   gem 'capistrano-rvm'

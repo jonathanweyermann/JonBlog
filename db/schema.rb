@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 20191129054355) do
     t.datetime "updated_at"
     t.string   "image_file_name"
     t.string   "image_content_type"
-    t.integer  "image_file_size"
+    t.integer  "image_file_size",    limit: 8
     t.datetime "image_updated_at"
   end
 
@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(version: 20191129054355) do
     t.string   "slug"
     t.string   "image_file_name"
     t.string   "image_content_type"
-    t.integer  "image_file_size"
+    t.integer  "image_file_size",    limit: 8
     t.datetime "image_updated_at"
     t.string   "link"
     t.integer  "priority"
@@ -79,7 +79,7 @@ ActiveRecord::Schema.define(version: 20191129054355) do
     t.integer  "post_id"
     t.string   "image_file_name"
     t.string   "image_content_type"
-    t.integer  "image_file_size"
+    t.integer  "image_file_size",    limit: 8
     t.datetime "image_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -97,12 +97,12 @@ ActiveRecord::Schema.define(version: 20191129054355) do
     t.datetime "updated_at"
     t.string   "image_file_name"
     t.string   "image_content_type"
-    t.integer  "image_file_size"
+    t.integer  "image_file_size",    limit: 8
     t.datetime "image_updated_at"
     t.integer  "state"
     t.datetime "publish_date"
     t.string   "slug"
-    t.integer  "job_priority",       default: 1
+    t.integer  "job_priority",                 default: 1
   end
 
   create_table "users", force: :cascade do |t|
