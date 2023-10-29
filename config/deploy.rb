@@ -52,7 +52,16 @@ set :linked_dirs, %w{tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads
 set :passenger_restart_command, 'passenger-config restart-app --instance MeHZPo8y'
 
 namespace :deploy do
-#  before :finishing, 'linked_files:upload'
+  desc 'Update Ruby version'
+  task :update_ruby_version do
+    on roles(:app) do
+      within release_path do
+        execute :rvm, 'use ruby-2.3.8' # Update this to the desired Ruby version
+      end
+    end
+  end
+
+  after 'deploy:starting', 'deploy:update_ruby_version' # Hook the task to the deployment process
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
       # Here we can do anything such as:
@@ -61,5 +70,4 @@ namespace :deploy do
       # end
     end
   end
-
 end
